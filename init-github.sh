@@ -8,7 +8,12 @@ read COMMIT_MSG
 git init
 git add .
 git commit -m "$COMMIT_MSG"
-git remote add origin https://github.com/este0207/LoreHeya-WebSite.git
+
+# Ajoute le remote seulement s'il n'existe pas déjà
+if ! git remote | grep -q origin; then
+  git remote add origin https://github.com/este0207/LoreHeya-WebSite.git
+fi
+
 git branch -M main
 git push -u origin main
 
