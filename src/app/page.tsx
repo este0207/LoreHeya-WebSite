@@ -1,11 +1,13 @@
-"use client";
+'use client';
 
-// import NavBar from "./components/NavBar";
-import MainSection from "./components/MainSection";
+import Card from "./components/Card";
+import Header from "./components/Header";
+
 export default function Page() {
   return (
-    <main className="bg-white text-black m-0 p-0 rounded-[10px]">
-      <MainSection></MainSection>
+    <main>
+      <Header></Header>
+      <Card></Card>
     </main>
   );
 }
