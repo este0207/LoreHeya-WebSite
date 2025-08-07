@@ -1,23 +1,32 @@
-"use client";
+'use client';
 import { useState, useEffect } from 'react';
 import NavBar from "./NavBar";
+import Image from 'next/image';
 
 
 export default function Header() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        // Déclenche l'apparition après un court délai pour permettre le rendu initial
         const timer = setTimeout(() => {
             setIsVisible(true);
-        }, 100); // Délai de 100ms
+        }, 500); // Délai de 100ms
 
         return () => clearTimeout(timer);
     }, []);
 
     return (
         <header className={`header-transition ${isVisible ? 'header-visible' : 'header-hidden'}`}>
-            <NavBar></NavBar>
+            <Image
+                src="/bg8.jpg"
+                alt="Header Background"
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                priority
+            />
+            <NavBar></NavBar>    
+            <button>next</button>
         </header>
     );
   }

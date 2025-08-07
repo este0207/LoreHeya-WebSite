@@ -1,4 +1,8 @@
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 :root {
@@ -18,10 +22,6 @@ body {
   padding: 0;
 }
 
-  /* nav > *{
-    border: 1px solid red;
-
-  } */
 
 nav{
   display: flex;
@@ -40,20 +40,26 @@ nav{
 
 .title{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items:center;
   font-family: "Libertinus Serif", serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 25px;
+  /* padding: 10px; */
 }
 
-/* .logos{
+.title h1{
+  margin: 0;
+  font-size: 40px;
+}
 
-} */
 
 .links{
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .links ul {
@@ -81,14 +87,12 @@ nav{
 header{
   display: flex;
   flex-direction: column;
-  background-image: url("/bg7.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0 4px 6px 10px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  min-height: 98vh;
   border-radius: 15px;
-  min-height: 95vh;
-  position: relative;
 }
 
 header::before {
@@ -101,6 +105,10 @@ header::before {
   background: linear-gradient(to bottom, rgb(255, 255, 255), transparent);
   z-index: 2;
   pointer-events: none;
+}
+
+header img{
+  border-radius: 15px;
 }
 
 
@@ -143,9 +151,14 @@ nav .links a, nav .title h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* S'assure qu'il est au-dessus de tout */
+  z-index: 9999; 
   background-color: #fff; /* Couleur de fond par défaut si l'image ne charge pas */
-  transition: opacity 0.5s ease-out;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.loading-screen.zoom-out {
+  transform: scale(10);
+  opacity: 0;
 }
 
 .loading-screen.hidden {
@@ -160,11 +173,11 @@ nav .links a, nav .title h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; /* Place l'image en arrière-plan */
+  z-index: -1; 
 }
 
 .loading-content {
-  color: white; /* Couleur du texte de chargement */
+  color: white; 
   font-size: 2rem;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
@@ -183,7 +196,6 @@ nav .links a, nav .title h1 {
   opacity: 1;
 }
 
-/* HTML: <div class="loader"></div> */
 .loader {
   width: 50px;
   aspect-ratio: 1.154;
@@ -210,4 +222,148 @@ nav .links a, nav .title h1 {
 }
  @keyframes l5{
   100% {transform:rotate(1turn)}
+}
+
+/* Styles pour les motifs abstraits des cartes */
+.card-pattern-1 {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1); /* Blanc semi-transparent */
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transform: rotate(20deg);
+  z-index: 0;
+}
+
+.card-pattern-2 {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 30% 70% 60% 40% / 70% 40% 30% 60%;
+  transform: rotate(-40deg);
+  z-index: 0;
+}
+
+/* Styles pour le composant Card */
+.card-container {
+  border-radius: 1rem; /* rounded-xl */
+  box-shadow: 0 4px 6px 10px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 45%;
+  margin: 10px;
+}
+
+.card-light {
+  background-color: #fff; /* bg-white */
+  color: #374151; /* text-gray-800 */
+}
+
+.card-dark {
+  background-color: #1A4314; /* bg-dark-green */
+  color: #fff; /* text-white */
+}
+
+.card-content {
+  padding: 1.5rem; /* p-6 */
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.card-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.card-description {
+  color: #6b7280; /* text-gray-600 */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.card-dark .card-description {
+  color: rgba(255, 255, 255, 0.8); /* Texte plus clair pour fond sombre */
+}
+
+.card-button {
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  border-radius: 9999px; /* rounded-full */
+  background-color: #f97316; /* bg-orange-500 */
+  color: #fff; /* text-white */
+  transition: 0.5s; /* transition-opacity */
+  border: none;
+}
+
+.card-button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card-image-container {
+  position: relative;
+  height: 8rem; /* h-32 */
+  width: 100%;
+  z-index: 1;
+}
+
+.card-image {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+/* Motifs abstraits pour les cartes */
+.card-container::before,
+.card-container::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+}
+
+.card-light::before {
+  top: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.05); /* Noir semi-transparent pour carte claire */
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transform: rotate(20deg);
+}
+
+.card-light::after {
+  bottom: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.08); /* Noir semi-transparent pour carte claire */
+  border-radius: 30% 70% 60% 40% / 70% 40% 30% 60%;
+  transform: rotate(-40deg);
+}
+
+.card-dark::before {
+  top: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1); /* Blanc semi-transparent pour carte sombre */
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transform: rotate(20deg);
+}
+
+.card-dark::after {
+  bottom: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.15); /* Blanc semi-transparent pour carte sombre */
+  border-radius: 30% 70% 60% 40% / 70% 40% 30% 60%;
+  transform: rotate(-40deg);
 }

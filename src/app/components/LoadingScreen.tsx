@@ -4,9 +4,13 @@ import Image from 'next/image';
 
 const LoadingScreen = ({ isFadingOut }: { isFadingOut: boolean }) => {
   return (
-    <div className={`loading-screen ${isFadingOut ? 'hidden' : ''}`}>
+    <div
+      className={`loading-screen ${
+        isFadingOut ? 'zoom-out' : ''
+      }`}
+    >
       <div className="loading-content">
-        <div className="loader"></div> {/* Le loader est ici */}
+        <div className="loader"></div>
       </div>
     </div>
   );

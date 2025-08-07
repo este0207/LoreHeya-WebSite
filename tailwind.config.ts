@@ -7,7 +7,11 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'dark-green': '#1A4314', // Couleur verte foncée inspirée de la maquette
+      },
+    },
   },
   plugins: [],
 };

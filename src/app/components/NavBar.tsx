@@ -26,7 +26,7 @@ export default function NavBar() {
     return (
       <nav>
         <div className="title">
-          <h1>LoreHeya</h1>
+          <h1>Lore Heya Chamane</h1>
           {/* <div className="logos">
             <Link href="/search"><Search /></Link>
             <Link href="/cart"><ShoppingCart /></Link>
