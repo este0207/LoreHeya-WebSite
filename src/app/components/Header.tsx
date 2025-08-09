@@ -25,8 +25,16 @@ export default function Header() {
                 quality={100}
                 priority
             />
-            <NavBar></NavBar>    
-            {/* <button>next</button> */}
+            <NavBar />
+
+            <div className="header-cta">
+                <h2 className="header-cta-title">Harmonie du corps et de l'âme</h2>
+                <p className="header-cta-subtitle">Réservez un soin ou découvrez les formations</p>
+                <div className="header-cta-actions">
+                    <a href="/soins" className="btn btn-primary">Réserver un soin</a>
+                    <a href="/formations" className="btn btn-ghost">Découvrir les formations</a>
+                </div>
+            </div>
         </header>
     );
   }

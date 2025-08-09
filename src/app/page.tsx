@@ -12,7 +12,7 @@ export default function Page() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadingOut(true);
-      setTimeout(() => setLoading(false), 2000); 
+      setTimeout(() => setLoading(false), 500); 
     }, 1000); 
 
     return () => clearTimeout(timer);
