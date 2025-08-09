@@ -3,10 +3,13 @@
 "use client";
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -28,10 +31,20 @@ export default function NavBar() {
     };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const onScroll = () => {
+      const scrolled = window.scrollY > 60;
+      setIsScrolled(scrolled);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav aria-label="Navigation principale">
+    <nav aria-label="Navigation principale" className={isScrolled ? 'scrolled' : ''}>
       <div className="title">
         <h1>Lore Heya Chamane</h1>
       </div>
@@ -56,19 +69,49 @@ export default function NavBar() {
         </button>
         <ul onClick={(e) => e.stopPropagation()}>
           <li>
-            <Link href="/formations" onClick={closeMenu}>FORMATIONS</Link>
+            <Link
+              href="/formations"
+              className={`nav-link ${pathname === '/formations' ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
+              FORMATIONS
+            </Link>
           </li>
           <li>
-            <Link href="/stages" onClick={closeMenu}>STAGES</Link>
+            <Link
+              href="/stages"
+              className={`nav-link ${pathname === '/stages' ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
+              STAGES
+            </Link>
           </li>
           <li>
-            <Link href="/soins" onClick={closeMenu}>SOINS</Link>
+            <Link
+              href="/soins"
+              className={`nav-link ${pathname === '/soins' ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
+              SOINS
+            </Link>
           </li>
           <li>
-            <Link href="/faq" onClick={closeMenu}>FAQ</Link>
+            <Link
+              href="/faq"
+              className={`nav-link ${pathname === '/faq' ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
+              FAQ
+            </Link>
           </li>
           <li>
-            <Link href="/contact" onClick={closeMenu}>CONTACT</Link>
+            <Link
+              href="/contact"
+              className={`nav-link ${pathname === '/contact' ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
+              CONTACT
+            </Link>
           </li>
         </ul>
       </div>

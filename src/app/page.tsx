@@ -41,11 +41,13 @@ export default function Page() {
       <Header></Header>
       <div className="CardContainer">
         <Card
-          title="Lorem ipsum dolor sit amet"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          buttonText="En savoir plus"
-          buttonLink="#"
+          title="Platon"
+          description={`-On ne peut guérir la partie sans soigner le tout.
+-On ne doit pas soigner le corps séparé de l'âme,
+et pour que l'esprit et le corps retrouvent la santé,
+il faut commencer par soigner l'âme.`}
           isDark={false}
+          isCentered
         />
         <Card
           title="Quisque et justo in ligula"

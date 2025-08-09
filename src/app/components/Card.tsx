@@ -7,10 +7,11 @@ import { motion } from 'framer-motion';
 interface CardProps {
   title: string;
   description: string;
-  buttonText: string;
-  buttonLink: string;
+  buttonText?: string;
+  buttonLink?: string;
   backgroundImage?: string;
   isDark?: boolean; // Pour indiquer si la carte est sombre (fond vert) ou claire (fond blanc)
+  isCentered?: boolean; // Centre le contenu horizontalement et le texte
 }
 
 const Card: React.FC<CardProps> = ({
@@ -20,6 +21,7 @@ const Card: React.FC<CardProps> = ({
   buttonLink,
   backgroundImage,
   isDark = false,
+  isCentered = false,
 }) => {
   return (
     <motion.div
@@ -27,16 +29,18 @@ const Card: React.FC<CardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5 }}
-      className={`card-container ${isDark ? 'card-dark' : 'card-light'}`}
+      className={`card-container ${isDark ? 'card-dark' : 'card-light'} ${isCentered ? 'centered-vert' : ''}`}
     >
-      <div className="card-content">
+      <div className={`card-content ${isCentered ? 'centered' : ''}`}>
         <h3 className="card-title">{title}</h3>
         <p className="card-description">{description}</p>
-        <Link href={buttonLink}>
-          <button className="card-button">
-            {buttonText}
-          </button>
-        </Link>
+        {buttonText && buttonLink && buttonText.trim().length > 0 && (
+          <Link href={buttonLink}>
+            <button className="card-button">
+              {buttonText}
+            </button>
+          </Link>
+        )}
       </div>
       {backgroundImage && (
         <div className="card-image-container">
