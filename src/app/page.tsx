@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <main>
       <Header></Header>
-      <div className="flex flex-wrap justify-center gap-8 p-8">
+      <div className="CardContainer">
         <Card
           title="Lorem ipsum dolor sit amet"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

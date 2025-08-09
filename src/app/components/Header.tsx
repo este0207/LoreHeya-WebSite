@@ -18,7 +18,7 @@ export default function Header() {
     return (
         <header className={`header-transition ${isVisible ? 'header-visible' : 'header-hidden'}`}>
             <Image
-                src="/bg8.jpg"
+                src="/bg5.jpg"
                 alt="Header Background"
                 layout="fill"
                 objectFit="cover"
