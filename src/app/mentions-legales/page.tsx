@@ -1,5 +1,5 @@
 import Link from "next/link";
-import NavBar from "../components/NavBar";
+import NavBar2 from "../components/NavBar2";
 
 export default function MentionsLegalesPage() {
   const updated = new Date("2025-08-01");
@@ -7,7 +7,7 @@ export default function MentionsLegalesPage() {
 
   return (
     <main>
-      {/* <NavBar></NavBar> */}
+      <NavBar2></NavBar2>
       {/* Hero visuel */}
       <section className="section">
         <div className="container legal-hero">
