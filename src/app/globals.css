@@ -30,7 +30,7 @@ nav{
   border-radius: 15px;
   position: sticky;
   top: 10px;
-  background: rgba(255,255,255,0.88);
+  background: rgb(255, 255, 255);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0,0,0,0.06);
@@ -537,7 +537,7 @@ header img{
 
 @media (max-width: 900px) {
   header::before {
-    top: 75px;
+    top: 60px;
   }
 
   .CardContainer{
