@@ -26,7 +26,7 @@ export default function Header() {
                 priority
             />
             <NavBar></NavBar>    
-            <button>next</button>
+            {/* <button>next</button> */}
         </header>
     );
   }

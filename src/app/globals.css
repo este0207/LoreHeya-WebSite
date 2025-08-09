@@ -463,6 +463,11 @@ nav .links a, nav .title h1 {
 
 .CardContainer{
   display: flex;
+  justify-content: center;
+}
+
+.mobile-close{
+  display: none;
 }
 
 @media (max-width: 900px) {
@@ -476,5 +481,9 @@ nav .links a, nav .title h1 {
 
   .card-container{
     width: 95%;
+  }
+
+  .mobile-close{
+    display: flex;
   }
 }
