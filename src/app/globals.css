@@ -695,6 +695,17 @@ header img{
 .faq details{ background:#fff; border:1px solid rgba(0,0,0,0.06); border-radius:10px; padding:10px 14px; margin:8px 0; }
 .faq summary{ cursor:pointer; font-weight:700; }
 
+/* FAQ – étoiles et commentaires */
+.stars{ display:inline-flex; gap:6px; }
+.star{ font-size: 22px; line-height: 1; background:none; border:none; cursor:pointer; color:#c0c0c0; padding:2px; }
+.star.active{ color:#f59e0b; }
+.comments{ list-style:none; padding:0; margin: 12px 0 0; display:grid; gap:10px; }
+.comment{ background:#fff; border:1px solid rgba(0,0,0,0.06); border-radius:10px; padding:10px 12px; }
+.comment-header{ display:flex; justify-content:space-between; align-items:center; font-weight:700; }
+.comment-author{ color:#1a4314; }
+.comment-rating{ color:#f59e0b; }
+.comment-body{ margin:6px 0 0; color:#374151; }
+
 .cta-banner{ background: rgba(26,67,20,0.08); border:1px solid rgba(26,67,20,0.15); border-radius:14px; padding:16px; display:flex; align-items:center; justify-content:space-between; gap: 12px; }
 .cta-banner-content h3{ margin: 0 0 6px; }
 
