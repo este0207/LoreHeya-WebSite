@@ -9,7 +9,7 @@
 
 
 html{
-  margin: 10px;
+  margin: 0 10px; /* conserver le gutter horizontal */
   scroll-behavior: smooth;
 }
 
@@ -199,13 +199,18 @@ nav{
     position: fixed;
     inset: 0;
     background: rgba(255,255,255,0.98);
+    /* min-height: 100vh; */
+    height: 50vh;
+    width: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     transform: translateY(0);
     opacity: 0;
     pointer-events: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0;
+    border-radius: 15px;
     z-index: 1100;
   }
 
@@ -661,6 +666,8 @@ header img{
 .flow > * + *{ margin-top: 12px; }
 
 /* Home story */
+
+.home-story{margin: 10px;}
 .home-story h2{ font-size: 32px; margin: 0 0 8px; font-family: "Libertinus Serif", serif; }
 .home-story-content{ white-space: pre-line; color:#374151; }
 
