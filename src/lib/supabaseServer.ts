@@ -5,8 +5,11 @@ let cachedClient: SupabaseClient | null = null;
 export function getSupabaseServerClient(): SupabaseClient {
   if (cachedClient) return cachedClient;
 
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  // Sanitize env values to avoid invalid header errors due to stray whitespace/quotes
+  const urlRaw = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const keyRaw = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const url = urlRaw?.trim();
+  const anonKey = keyRaw?.replace(/\s+/g, '');
 
   if (!url || !anonKey) {
     throw new Error('Supabase env vars missing: set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY');

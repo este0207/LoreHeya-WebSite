@@ -13,27 +13,57 @@ type CommentItem = {
   id: string;
   name: string;
   message: string;
-  rating: number; // 1..5
+  rating: number; 
   createdAt: number;
 };
 
 const DEFAULT_FAQ: FaqItem[] = [
   {
-    id: 'seances-nombre',
-    question: 'Combien de séances faut-il ? ',
+    id: 'etre-chaman',
+    question: 'Qu est ce que réellement un chaman ?',
     answer:
-      "Selon votre besoin: parfois 1 à 3 séances suffisent, d’autres fois un accompagnement sur quelques semaines est recommandé.",
+      `C est quelqu'un qui est désigné et "marqué" a la naissance par ses ancêtres (qu'on appellent des Oracles).\nLa personne est choisi pour continuer a pratiquer le chamanisme de sa lignée a travers elle.`,
   },
   {
-    id: 'frequence',
-    question: 'À quelle fréquence ?',
+    id: 'qui',
+    question: 'Est-ce que tout le monde peut être Chaman? ',
     answer:
-      'Comptez 2 à 4 semaines d’intégration entre 2 séances pour laisser le corps et l’esprit assimiler.',
+      'Non, uniquement ceux qui portent cette marque de naissance dans leur âme et qui sont reconnaissables par les autres Chamans.',
   },
   {
-    id: 'enfants',
-    question: 'Est-ce adapté aux enfants ?',
-    answer: 'Oui à partir de l’adolescence. Pour les plus jeunes, me contacter au préalable.',
+    id: 'apprendre',
+    question: 'Est ce que sans être Chaman de naissance je peux apprendre le chamanisme?',
+    answer: `Totalement.\nJe peux devenir praticien en Chamanisme, c'est à dire que je n'ai pas été désigné par mes ancêtres mais j'ai appris les même enseignements et j'ai le droit de pratiquer le chamanisme sous ce nom et non en tant que Chaman.\nLe praticien en Chamanisme peut avoir autant de capacités qu'un Chaman dans un soin et son accompagnement, simplement il ne pourra pas incorporer.`,
+  },
+  {
+    id: 'Mongolie',
+    question: `Comment être sûr d'avoir affaire à un Chaman sérieux en Mongolie ou en France? `,
+    answer: `Même en Mongolie il peut y avoir du Chamanisme de tourisme, pour y échapper voici des conditions cumulatives:\nIl a été reconnu Chaman par plusieurs Chamans traditionnels,\nIl a reçu un enseignement de chamanisme ancestral pendant plusieurs années,\nIl connaît des Chamans traditionnels,\nSa tenue est unique et personnelle,\nIl fait partie de l'association "Maison de lumière" en Mongolie (ou son Maître en fait partie),\nC'est un Chaman blanc,\nJe paie ma consultation,`,
+  },
+  {
+    id: 'incorporation',
+    question: `Qu'est-ce que l'incorporation?`,
+    answer: `En Mongolie le Chaman prête son corps à son oracle (ancêtre) afin qu'il parle et soigne à travers son "relayeur".\nUn esprit entre donc dans son corps le temps d'une cérémonie du feu.`,
+  },
+  {
+    id: 'fausses-formations',
+    question: `Est-ce qu'il existe de fausses formations, fausses transes... faux voyages initiatiques?`,
+    answer: `Totalement, servez vous des conseils plus haut afin de les repérer.\nCe qui est très important c'est de demander au Chaman par qui a t-il été formé et reconnu.\nS'il n'est ni reconnu ni formé par un Chaman traditionnel il s'est simplement proclamé Chaman lui-même.\nL'association "maison de lumière" est un gage de garantie également car elle ressence tous les vrais Chamans de Mongolie en se préservant des pratiques pour les touristes.`,
+  },
+  {
+    id: 'type-chamanisme',
+    question: `Quelle sorte de Chamanisme vous enseignez?`,
+    answer: `Le néo Chamanisme Sibérien crée par les Chamans eux même dans les années 1950.\nLe Chamanisme Mongol traditionnel.\nLe Chamanisme Amérindien.`,
+  },
+  {
+    id: 'contenu-formations',
+    question: `En quoi consiste vos formations?`,
+    answer: `Une partie du programme est consacré à l'apprentissage de la sagesse spirituelle du chamanisme afin d'être plus stable émotionnellement.\nPuis la majorité de l'enseignement porte sur la guérison des blessures, traumatismes, libération du transgénérationnel, connaissance de son chemin de vie.. avec des outils spécifiques au Chamanisme comme les recouvrements d'âme par exemple.`,
+  },
+  {
+    id: 'pour-qui-formations',
+    question: `Pour qui sont vos formations?`,
+    answer: `Toutes personnes qui souhaitent apprendre à guérir leurs propres blessures ou en faire un métier afin d'aider les autres à guérir les leurs.\nDébutants comme thérapeutes sont bienvenus.`,
   },
 ];
 
@@ -66,7 +96,6 @@ function useCommentsApi(page: string) {
 
   useEffect(() => {
     fetchComments();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const add = async (comment: Omit<CommentItem, 'id' | 'createdAt'>) => {
@@ -99,7 +128,6 @@ function useCommentsApi(page: string) {
         ];
       });
     } catch (e) {
-      // rollback optimistic
       setComments((prev) => prev.filter((c) => c.id !== optimistic.id));
       const msg = e instanceof Error ? e.message : 'Erreur envoi';
       alert(msg);
@@ -245,7 +273,7 @@ function FaqBlock({ item }: { item: FaqItem }) {
     <details open={open} onToggle={(e) => setOpen((e.target as HTMLDetailsElement).open)}>
       <summary>{item.question}</summary>
       <div className="flow">
-        <p>{item.answer}</p>
+        <p style={{ whiteSpace: 'pre-line' }}>{item.answer}</p>
       </div>
     </details>
   );
