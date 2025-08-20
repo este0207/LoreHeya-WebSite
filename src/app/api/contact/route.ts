@@ -54,7 +54,7 @@ export async function POST(request: Request) {
     const useBrevo = Boolean(brevoApiKey && brevoApiKey.trim().length > 0);
 
     if (useBrevo) {
-      const senderEmail = smtpFrom || 'no-reply@loreheya.fr';
+      const senderEmail = smtpFrom || 'esteban.h0207@gmail.com';
       const payload = {
         sender: { email: senderEmail, name: 'Site Lore Heya' },
         to: [{ email: smtpTo }],
