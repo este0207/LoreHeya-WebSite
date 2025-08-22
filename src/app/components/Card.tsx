@@ -10,8 +10,8 @@ interface CardProps {
   buttonText?: string;
   buttonLink?: string;
   backgroundImage?: string;
-  isDark?: boolean; // Pour indiquer si la carte est sombre (fond vert) ou claire (fond blanc)
-  isCentered?: boolean; // Centre le contenu horizontalement et le texte
+  isDark?: boolean; 
+  isCentered?: boolean; 
 }
 
 const Card: React.FC<CardProps> = ({
@@ -30,27 +30,35 @@ const Card: React.FC<CardProps> = ({
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5 }}
       className={`card-container ${isDark ? 'card-dark' : 'card-light'} ${isCentered ? 'centered-vert' : ''}`}
+      style={{ position: 'relative', overflow: 'hidden' }}
     >
-      {/** Anchor smooth-scroll handler for in-page links */}
-      {/** Using a function here to keep render clean */}
-      {/** It only triggers when buttonLink is a hash (#id) */}
-      {/** No changes for external or normal links */}
-      {/** Types ensure safe event usage */}
-      {/** history.replaceState used to update hash without jump */}
-      {/** Note: globals.css also sets scroll-behavior: smooth as fallback */}
-      {/** This keeps UX consistent even if Link does default scroll */}
-      {/** and allows offset control later if needed */}
-      
-      {(() => null)()}
-      
-      {/** Helper defined inline to access buttonLink */}
-      {/** eslint-disable-next-line react/jsx-no-undef */}
-      
-      {/** We keep logic inside component scope */}
-      
-      {/** @ts-ignore - helper function declared below via function hoisting */}
-      
-      <div className={`card-content ${isCentered ? 'centered' : ''}`}>
+      {backgroundImage && (
+        <Image
+          src={backgroundImage}
+          alt="Card Background"
+          fill
+          style={{ objectFit: 'cover', zIndex: 0 }}
+          className="card-bg-image"
+          priority
+        />
+      )}
+      {/* Overlay pour lisibilité */}
+      {backgroundImage && (
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: isDark
+              ? 'linear-gradient(120deg, rgba(26,67,20,0.65) 60%, rgba(0,0,0,0.35) 100%)'
+              : 'linear-gradient(120deg, rgba(255,255,255,0.65) 60%, rgba(0,0,0,0.15) 100%)',
+            zIndex: 1,
+          }}
+        />
+      )}
+      <div
+        className={`card-content ${isCentered ? 'centered' : ''}`}
+        style={{ position: 'relative', zIndex: 2 }}
+      >
         <h3 className="card-title">{title}</h3>
         <p className="card-description">{description}</p>
         {buttonText && buttonLink && buttonText.trim().length > 0 && (
@@ -77,17 +85,6 @@ const Card: React.FC<CardProps> = ({
           </Link>
         )}
       </div>
-      {backgroundImage && (
-        <div className="card-image-container">
-          <Image
-            src={backgroundImage}
-            alt="Card Background"
-            layout="fill"
-            objectFit="cover"
-            className="card-image"
-          />
-        </div>
-      )}
     </motion.div>
   );
 };

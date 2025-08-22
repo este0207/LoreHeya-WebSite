@@ -54,23 +54,42 @@ export default function Page() {
           Des soins, des guidances, et des voyages vers la Mongolie afin de rencontrer des Chamans traditionnels. `}</p>
         </div>
       </section>
-      <div className="CardContainer">
+      <div className="home-card-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 40, margin: '40px 0' }}>
         <Card
-          title="Platon"
-          description={`-On ne peut guérir la partie sans soigner le tout.
-          -On ne doit pas soigner le corps séparé de l'âme,
-          et pour que l'esprit et le corps retrouvent la santé,
-          il faut commencer par soigner l'âme.`}
-          isDark={false}
+          title="Voyage en Mongolie"
+          description="Immersion chamanique au cœur des steppes."
+          buttonText="Découvrir le voyage"
+          buttonLink="/Voyage_Mongolie"
+          isDark={true}
           isCentered
+          backgroundImage="/home_cards/mongolie.jpg"
         />
         <Card
-          title=""
-          description=""
-          buttonText=""
-          buttonLink="#"
+          title="Plateforme de formation"
+          description="Rééquilibrage, libération, ancrage."
+          buttonText="Voir les soins"
+          buttonLink="/soins"
+          isDark
+          isCentered
+          backgroundImage="/home_cards/plateforme.jpeg"
+        />
+        <Card
+          title="Formations"
+          description="Devenez praticien·ne, développez vos dons."
+          buttonText="Découvrir les formations"
+          buttonLink="/formations"
           isDark={true}
-          backgroundImage="/bg2.jpg"
+          isCentered
+          backgroundImage="/home_cards/formation.jpeg"
+        />
+        <Card
+          title="Stages"
+          description="Expériences collectives, transformation profonde."
+          buttonText="Voir les stages"
+          buttonLink="/stages"
+          isDark={true}
+          isCentered
+          backgroundImage="/home_cards/stages.jpeg"
         />
       </div>
     </main>
