@@ -88,15 +88,83 @@ export default function VoyageMongoliePage() {
       {/* Itinéraires 2026 */}
       <section className="section" id="itineraires">
         <div className="container flow">
-          <h2>Itinéraires 2026</h2>
-          <ul className="list">
-            <li><strong>Du 12 au 25 juillet 2026</strong></li>
-            <li><strong>Du 27 juillet au 10 août 2026</strong></li>
-            <li><strong>Du 12 au 26 août 2026</strong></li>
-          </ul>
-          <p>
-            Chaque itinéraire propose une immersion complète, des rencontres authentiques et des paysages à couper le souffle. Le programme détaillé est disponible sur demande.
-          </p>
+          <h2>Voyages initiatiques 2026</h2>
+
+          {/* Voyage 1 */}
+          <div style={{marginBottom: 48}}>
+            <h3>Voyage du 27 juillet au 10 août 2026</h3>
+            <p>
+              Durant ce voyage initiatique, les 4 chamanes seront présents tout le long du séjour afin de vous partager leurs connaissances millénaires et vous guider à travers des cérémonies puissantes. Loin des touristes, vous apprendrez des techniques anciennes pour ancrer votre corps dans la nature majestueuse de la Mongolie. Le programme inclut des moments de purification énergétique, des enseignements, ainsi que des consultations individuelles dans les lieux sacrés de la Mongolie centrale.
+            </p>
+            <details>
+              <summary><strong>Programme jour par jour</strong></summary>
+              <ul className="list">
+                <li><strong>27 juillet :</strong> Départ de Francfort, vol pour Oulan Bator.</li>
+                <li><strong>28 juillet :</strong> Oulan Bator / Khogno Khan, randonnée, ouverture du cercle avec les chamans.</li>
+                <li><strong>29 juillet :</strong> Ovgunt / Karakorum, visite de l’oasis d’Elsen Tasarkhai et du monastère Erdene Zuu.</li>
+                <li><strong>31 juillet :</strong> Karakorum / Source d’eau chaude naturelle, détente et nuit chez les nomades.</li>
+                <li><strong>1er août :</strong> Séjour chez les nomades de Tsagaan Sum, randonnée vers le temple Tuvkhni.</li>
+                <li><strong>1 au 5 août :</strong> Journées d’échanges et d’apprentissage intense dans la vallée de l’Orkhon.</li>
+                <li><strong>6-7 août :</strong> Séjour au lac Ogui, immersion et détente.</li>
+                <li><strong>8 août :</strong> Retour à Oulan-Bator, soirée conviviale sous la yourte.</li>
+                <li><strong>9 août :</strong> Journée culturelle à Oulan-Bator, visite du monastère Gandan, musée national, spectacle traditionnel.</li>
+                <li><strong>10 août :</strong> Retour à Francfort.</li>
+              </ul>
+            </details>
+            <details>
+              <summary><strong>Infos pratiques</strong></summary>
+              <ul className="list">
+                <li>Prix : 3490 € TTC au départ de Francfort</li>
+                <li>Transferts aéroport / yourte / aéroport inclus</li>
+                <li>Billet d’avion A/R au départ de Francfort inclus</li>
+                <li>Toutes les nuits prévues dans différents logements, camps de yourte, nuits chez les nomades</li>
+                <li>Pension complète durant l’excursion (repas, restaurants, eau, thé)</li>
+                <li>Douches chaudes, transport, port des bagages</li>
+                <li>Interprète francophone, guides locaux, cuisiniers</li>
+                <li>Enseignements des chamanes mongols, cérémonies, consultations individuelles</li>
+                <li>Droits d’entrée des parcs, musées, spectacle traditionnel mongol</li>
+                <li>Matériel fourni (tentes, matelas, couvertures, table, chaises de camping)</li>
+              </ul>
+            </details>
+          </div>
+
+          {/* Voyage 2 */}
+          <div>
+            <h3>Voyage du 12 au 26 août 2026</h3>
+            <p>
+              Voyage d’apprentissage des massages Yumeiho avec les Chamans. Durant ce voyage initiatique, les 4 chamanes seront présents tout le long du séjour afin de vous partager leurs connaissances millénaires et vous guider à travers des cérémonies puissantes. Vous apprendrez des techniques de manipulation du corps et de massage selon la tradition Japonaise Yumeiho afin de réharmoniser les corps énergétiques et physiques. Le programme inclut des moments de purification énergétique, des enseignements, ainsi que des consultations individuelles dans les lieux sacrés de la Mongolie centrale.
+            </p>
+            <details>
+              <summary><strong>Programme jour par jour</strong></summary>
+              <ul className="list">
+                <li><strong>12 août :</strong> Départ de Francfort, vol pour Oulan Bator.</li>
+                <li><strong>13 août :</strong> Oulan Bator / Khogno Khan, randonnée, ouverture du cercle avec les chamans.</li>
+                <li><strong>14 août :</strong> Ovgunt / Karakorum, visite de l’oasis d’Elsen Tasarkhai et du monastère Erdene Zuu.</li>
+                <li><strong>15 août :</strong> Karakorum / Source d’eau chaude naturelle, détente et nuit chez les nomades.</li>
+                <li><strong>16 août :</strong> Séjour chez les nomades de Tsagaan Sum, randonnée vers le temple Tuvkhni.</li>
+                <li><strong>17 au 21 août :</strong> Journées d’échanges et d’apprentissage intense dans la vallée de l’Orkhon.</li>
+                <li><strong>22 au 24 août :</strong> Séjour au lac Ogui, immersion et détente.</li>
+                <li><strong>24 août :</strong> Retour à Oulan-Bator, soirée conviviale sous la yourte.</li>
+                <li><strong>25 août :</strong> Journée culturelle à Oulan-Bator, visite du monastère Gandan, musée national, spectacle traditionnel.</li>
+                <li><strong>26 août :</strong> Retour à Francfort.</li>
+              </ul>
+            </details>
+            <details>
+              <summary><strong>Infos pratiques</strong></summary>
+              <ul className="list">
+                <li>Prix : 3490 € TTC au départ de Francfort</li>
+                <li>Transferts aéroport / yourte / aéroport inclus</li>
+                <li>Billet d’avion A/R au départ de Francfort inclus</li>
+                <li>Toutes les nuits prévues dans différents logements, camps de yourte, nuits chez les nomades</li>
+                <li>Pension complète durant l’excursion (repas, restaurants, eau, thé)</li>
+                <li>Douches chaudes, transport, port des bagages</li>
+                <li>Interprète francophone, guides locaux, cuisiniers</li>
+                <li>Enseignements des chamanes mongols, cérémonies, consultations individuelles</li>
+                <li>Droits d’entrée des parcs, musées, spectacle traditionnel mongol</li>
+                <li>Matériel fourni (tentes, matelas, couvertures, table, chaises de camping)</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </section>
 
