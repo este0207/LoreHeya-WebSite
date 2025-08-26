@@ -63,6 +63,7 @@ export default function Page() {
           isDark={true}
           isCentered
           backgroundImage="/home_cards/mongolie.jpg"
+          backgroundPosition="center 30%"
         />
         <Card
           title="Plateforme de formation"
@@ -81,6 +82,7 @@ export default function Page() {
           isDark={true}
           isCentered
           backgroundImage="/home_cards/formation.jpeg"
+          backgroundPosition="center 40%"
         />
         <Card
           title="Stages"

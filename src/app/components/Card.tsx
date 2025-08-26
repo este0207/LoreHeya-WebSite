@@ -12,6 +12,7 @@ interface CardProps {
   backgroundImage?: string;
   isDark?: boolean; 
   isCentered?: boolean; 
+  backgroundPosition?: string; // Ajouté
 }
 
 const Card: React.FC<CardProps> = ({
@@ -22,6 +23,7 @@ const Card: React.FC<CardProps> = ({
   backgroundImage,
   isDark = false,
   isCentered = false,
+  backgroundPosition = 'center', // Ajouté
 }) => {
   return (
     <motion.div
@@ -37,7 +39,7 @@ const Card: React.FC<CardProps> = ({
           src={backgroundImage}
           alt="Card Background"
           fill
-          style={{ objectFit: 'cover', zIndex: 0 }}
+          style={{ objectFit: 'cover', zIndex: 0, objectPosition: backgroundPosition }} // Ajouté objectPosition
           className="card-bg-image"
           priority
         />
