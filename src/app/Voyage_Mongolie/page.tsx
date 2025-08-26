@@ -173,7 +173,7 @@ export default function VoyageMongoliePage() {
         <div className="container cta-banner">
           <div className="cta-banner-content">
             <h3>Prêt·e à vivre l’aventure ?</h3>
-            <p>Contacte-moi pour recevoir le programme détaillé, les dates et les modalités d’inscription.</p>
+            <p>Contacte-moi pour recevoir les modalités d’inscription.</p>
           </div>
           <a href="/contact" className="btn btn-primary">Demander le programme</a>
         </div>
