@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavBar2 from '../components/NavBar2';
-
+import { useState } from 'react';
 
 const photos = [
   "530401683_1498342761343456_2773780068025653957_n.jpg",
@@ -28,6 +28,38 @@ const photos = [
 ];
 
 export default function VoyageMongoliePage() {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  const openModal = (index: number) => {
+    setSelectedImage(index);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  const nextImage = () => {
+    if (selectedImage !== null) {
+      setSelectedImage((selectedImage + 1) % photos.length);
+    }
+  };
+
+  const prevImage = () => {
+    if (selectedImage !== null) {
+      setSelectedImage(selectedImage === 0 ? photos.length - 1 : selectedImage - 1);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      closeModal();
+    } else if (e.key === 'ArrowRight') {
+      nextImage();
+    } else if (e.key === 'ArrowLeft') {
+      prevImage();
+    }
+  };
+
   return (
       <main>
         <NavBar2></NavBar2>
@@ -54,7 +86,27 @@ export default function VoyageMongoliePage() {
           <h2 style={{textAlign: "center", fontFamily: 'Libertinus Serif, serif', fontSize: 32}}>La Mongolie en images</h2>
           <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16, marginTop: 24}}>
             {photos.map((file, idx) => (
-              <div key={file} style={{position: "relative", width: 260, height: 180, borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.08)", margin: 8}}>
+              <div 
+                key={file} 
+                style={{
+                  position: "relative", 
+                  width: 260, 
+                  height: 180, 
+                  borderRadius: 12, 
+                  overflow: "hidden", 
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.08)", 
+                  margin: 8,
+                  cursor: "pointer",
+                  transition: "transform 0.2s ease-in-out"
+                }}
+                onClick={() => openModal(idx)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "scale(1.05)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "scale(1)";
+                }}
+              >
                 <Image
                   src={`/mongolie/${file}`}
                   alt={`Voyage Mongolie ${idx+1}`}
@@ -68,6 +120,131 @@ export default function VoyageMongoliePage() {
           </div>
         </div>
       </section>
+
+      {/* Modal pour afficher l'image en grand */}
+      {selectedImage !== null && (
+        <div 
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.9)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 1000,
+            cursor: "pointer"
+          }}
+          onClick={closeModal}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+        >
+          <div style={{position: "relative", maxWidth: "90vw", maxHeight: "90vh"}}>
+            <Image
+              src={`/mongolie/${photos[selectedImage]}`}
+              alt={`Voyage Mongolie ${selectedImage + 1}`}
+              width={800}
+              height={600}
+              style={{
+                objectFit: "contain",
+                maxWidth: "100%",
+                maxHeight: "100%"
+              }}
+            />
+            
+            {/* Bouton fermer */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                closeModal();
+              }}
+              style={{
+                position: "absolute",
+                top: -40,
+                right: 0,
+                background: "none",
+                border: "none",
+                color: "white",
+                fontSize: "2rem",
+                cursor: "pointer",
+                padding: "8px"
+              }}
+            >
+              ×
+            </button>
+            
+            {/* Flèche gauche */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
+              style={{
+                position: "absolute",
+                left: -60,
+                top: "50%",
+                transform: "translateY(-50%)",
+                background: "rgba(255, 255, 255, 0.2)",
+                border: "none",
+                color: "white",
+                fontSize: "2rem",
+                cursor: "pointer",
+                padding: "12px 16px",
+                borderRadius: "50%",
+                width: "50px",
+                height: "50px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              ‹
+            </button>
+            
+            {/* Flèche droite */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
+              style={{
+                position: "absolute",
+                right: -60,
+                top: "50%",
+                transform: "translateY(-50%)",
+                background: "rgba(255, 255, 255, 0.2)",
+                border: "none",
+                color: "white",
+                fontSize: "2rem",
+                cursor: "pointer",
+                padding: "12px 16px",
+                borderRadius: "50%",
+                width: "50px",
+                height: "50px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              ›
+            </button>
+            
+            {/* Indicateur de position */}
+            <div style={{
+              position: "absolute",
+              bottom: -40,
+              left: "50%",
+              transform: "translateX(-50%)",
+              color: "white",
+              fontSize: "1rem"
+            }}>
+              {selectedImage + 1} / {photos.length}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Description du voyage */}
       <section className="section" id="infos">
@@ -101,10 +278,10 @@ export default function VoyageMongoliePage() {
               <ul className="list">
                 <li><strong>27 juillet :</strong> Départ de Francfort, vol pour Oulan Bator.</li>
                 <li><strong>28 juillet :</strong> Oulan Bator / Khogno Khan, randonnée, ouverture du cercle avec les chamans.</li>
-                <li><strong>29 juillet :</strong> Ovgunt / Karakorum, visite de l’oasis d’Elsen Tasarkhai et du monastère Erdene Zuu.</li>
-                <li><strong>31 juillet :</strong> Karakorum / Source d’eau chaude naturelle, détente et nuit chez les nomades.</li>
+                <li><strong>29 juillet :</strong> Ovgunt / Karakorum, visite de l'oasis d'Elsen Tasarkhai et du monastère Erdene Zuu.</li>
+                <li><strong>31 juillet :</strong> Karakorum / Source d'eau chaude naturelle, détente et nuit chez les nomades.</li>
                 <li><strong>1er août :</strong> Séjour chez les nomades de Tsagaan Sum, randonnée vers le temple Tuvkhni.</li>
-                <li><strong>1 au 5 août :</strong> Journées d’échanges et d’apprentissage intense dans la vallée de l’Orkhon.</li>
+                <li><strong>1 au 5 août :</strong> Journées d'échanges et d'apprentissage intense dans la vallée de l'Orkhon.</li>
                 <li><strong>6-7 août :</strong> Séjour au lac Ogui, immersion et détente.</li>
                 <li><strong>8 août :</strong> Retour à Oulan-Bator, soirée conviviale sous la yourte.</li>
                 <li><strong>9 août :</strong> Journée culturelle à Oulan-Bator, visite du monastère Gandan, musée national, spectacle traditionnel.</li>
@@ -116,13 +293,13 @@ export default function VoyageMongoliePage() {
               <ul className="list">
                 <li>Prix : 3490 € TTC au départ de Francfort</li>
                 <li>Transferts aéroport / yourte / aéroport inclus</li>
-                <li>Billet d’avion A/R au départ de Francfort inclus</li>
+                <li>Billet d'avion A/R au départ de Francfort inclus</li>
                 <li>Toutes les nuits prévues dans différents logements, camps de yourte, nuits chez les nomades</li>
-                <li>Pension complète durant l’excursion (repas, restaurants, eau, thé)</li>
+                <li>Pension complète durant l'excursion (repas, restaurants, eau, thé)</li>
                 <li>Douches chaudes, transport, port des bagages</li>
                 <li>Interprète francophone, guides locaux, cuisiniers</li>
                 <li>Enseignements des chamanes mongols, cérémonies, consultations individuelles</li>
-                <li>Droits d’entrée des parcs, musées, spectacle traditionnel mongol</li>
+                <li>Droits d'entrée des parcs, musées, spectacle traditionnel mongol</li>
                 <li>Matériel fourni (tentes, matelas, couvertures, table, chaises de camping)</li>
               </ul>
             </details>
@@ -132,17 +309,17 @@ export default function VoyageMongoliePage() {
           <div>
             <h3>Voyage du 12 au 26 août 2026</h3>
             <p>
-              Voyage d’apprentissage des massages Yumeiho avec les Chamans. Durant ce voyage initiatique, les 4 chamanes seront présents tout le long du séjour afin de vous partager leurs connaissances millénaires et vous guider à travers des cérémonies puissantes. Vous apprendrez des techniques de manipulation du corps et de massage selon la tradition Japonaise Yumeiho afin de réharmoniser les corps énergétiques et physiques. Le programme inclut des moments de purification énergétique, des enseignements, ainsi que des consultations individuelles dans les lieux sacrés de la Mongolie centrale.
+              Voyage d'apprentissage des massages Yumeiho avec les Chamans. Durant ce voyage initiatique, les 4 chamanes seront présents tout le long du séjour afin de vous partager leurs connaissances millénaires et vous guider à travers des cérémonies puissantes. Vous apprendrez des techniques de manipulation du corps et de massage selon la tradition Japonaise Yumeiho afin de réharmoniser les corps énergétiques et physiques. Le programme inclut des moments de purification énergétique, des enseignements, ainsi que des consultations individuelles dans les lieux sacrés de la Mongolie centrale.
             </p>
             <details>
               <summary><strong>Programme jour par jour</strong></summary>
               <ul className="list">
                 <li><strong>12 août :</strong> Départ de Francfort, vol pour Oulan Bator.</li>
                 <li><strong>13 août :</strong> Oulan Bator / Khogno Khan, randonnée, ouverture du cercle avec les chamans.</li>
-                <li><strong>14 août :</strong> Ovgunt / Karakorum, visite de l’oasis d’Elsen Tasarkhai et du monastère Erdene Zuu.</li>
-                <li><strong>15 août :</strong> Karakorum / Source d’eau chaude naturelle, détente et nuit chez les nomades.</li>
+                <li><strong>14 août :</strong> Ovgunt / Karakorum, visite de l'oasis d'Elsen Tasarkhai et du monastère Erdene Zuu.</li>
+                <li><strong>15 août :</strong> Karakorum / Source d'eau chaude naturelle, détente et nuit chez les nomades.</li>
                 <li><strong>16 août :</strong> Séjour chez les nomades de Tsagaan Sum, randonnée vers le temple Tuvkhni.</li>
-                <li><strong>17 au 21 août :</strong> Journées d’échanges et d’apprentissage intense dans la vallée de l’Orkhon.</li>
+                <li><strong>17 au 21 août :</strong> Journées d'échanges et d'apprentissage intense dans la vallée de l'Orkhon.</li>
                 <li><strong>22 au 24 août :</strong> Séjour au lac Ogui, immersion et détente.</li>
                 <li><strong>24 août :</strong> Retour à Oulan-Bator, soirée conviviale sous la yourte.</li>
                 <li><strong>25 août :</strong> Journée culturelle à Oulan-Bator, visite du monastère Gandan, musée national, spectacle traditionnel.</li>
@@ -154,13 +331,13 @@ export default function VoyageMongoliePage() {
               <ul className="list">
                 <li>Prix : 3490 € TTC au départ de Francfort</li>
                 <li>Transferts aéroport / yourte / aéroport inclus</li>
-                <li>Billet d’avion A/R au départ de Francfort inclus</li>
+                <li>Billet d'avion A/R au départ de Francfort inclus</li>
                 <li>Toutes les nuits prévues dans différents logements, camps de yourte, nuits chez les nomades</li>
-                <li>Pension complète durant l’excursion (repas, restaurants, eau, thé)</li>
+                <li>Pension complète durant l'excursion (repas, restaurants, eau, thé)</li>
                 <li>Douches chaudes, transport, port des bagages</li>
                 <li>Interprète francophone, guides locaux, cuisiniers</li>
                 <li>Enseignements des chamanes mongols, cérémonies, consultations individuelles</li>
-                <li>Droits d’entrée des parcs, musées, spectacle traditionnel mongol</li>
+                <li>Droits d'entrée des parcs, musées, spectacle traditionnel mongol</li>
                 <li>Matériel fourni (tentes, matelas, couvertures, table, chaises de camping)</li>
               </ul>
             </details>
