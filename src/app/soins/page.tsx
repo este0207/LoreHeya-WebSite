@@ -31,7 +31,7 @@ export default function SoinsPage() {
         <div className="container">
           <div className="CardContainer">
             <Card
-              title="Séance Chamanique a Distance"
+              title="Guidance des oracles a Distance"
               description="Rééquilibrage des centres énergétiques, libération des tensions et apaisement du système nerveux. Idéal pour retrouver vitalité et clarté."
               buttonText="Réserver"
               buttonLink="/contact"
@@ -84,7 +84,7 @@ export default function SoinsPage() {
           <h2>Tarifs & durée</h2>
           <div className="price-grid">
             <div className="price-card">
-              <h3>Séance Chamanique a Distance</h3>
+              <h3>Guidance des oracles a Distance</h3>
               <p className="price">70€ · 1h30</p>
             </div>
             <div className="price-card">
@@ -114,7 +114,7 @@ export default function SoinsPage() {
             <h2>Contre-indications</h2>
             <ul className="list">
               <li>Ne remplace pas un suivi médical. En cas d’urgence, appelez le 15.</li>
-              <li>Grossesse à risque: demandez un avis médical préalable.</li>
+              <li>Grossesse.</li>
               <li>Pathologies lourdes: travail en complémentarité uniquement.</li>
             </ul>
           </div>
@@ -132,11 +132,11 @@ export default function SoinsPage() {
             </details>
             <details>
               <summary>À quelle fréquence ?</summary>
-              <p>Comptez 2 à 4 semaines d’intégration entre 2 séances pour laisser le corps et l’esprit assimiler.</p>
+              <p>Comptez 4 semaines d’intégration.</p>
             </details>
             <details>
               <summary>Est-ce adapté aux enfants ?</summary>
-              <p>Oui à partir de l’adolescence. Pour les plus jeunes, me contacter au préalable.</p>
+              <p>Oui dès le plus jeune âge</p>
             </details>
           </div>
         </div>
