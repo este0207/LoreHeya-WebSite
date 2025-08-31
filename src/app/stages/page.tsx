@@ -13,59 +13,94 @@ export default function StagesPage() {
         <div className="container" style={{ textAlign: 'center' }}>
           <h1 style={{ margin: 0 }}>Stages et retraites</h1>
           <p style={{ margin: '8px 0 0' }}>
-            Rencontres en présentiel dans le 06 pour vivre des transmissions, des rituels et des pratiques
-            en nature, au cœur d'un cadre sécurisé et bienveillant.
+            Rencontres en présentiel dans le 06 et stages exceptionnels avec des chamans internationaux pour vivre des transmissions, 
+            des rituels et des pratiques en nature, au cœur d'un cadre sécurisé et bienveillant.
           </p>
         </div>
       </section>
 
-      {/* Carte du stage spécial uniquement */}
+      {/* Carte du stage chamanisme mongol */}
       <section className="section">
         <div className="container">
           <div className="CardContainer">
             <Card
-              title="Spécial Entités / Énergies sombres"
-              description="Nouveau stage en collaboration avec Céline: protections, désenvoûtements, repérer les faux guides, cérémonies."
-              buttonText="Voir le programme"
-              buttonLink="#stage-entities"
-              isDark
-              backgroundImage="/bg6.jpg"
+              title="Chamanisme Mongol Traditionnel"
+              description="Déplacement exceptionnel en France d'un Chaman Mongol traditionnel. Mooggii, Chaman Blanc de 25 ans d'expérience."
+              buttonText="Découvrir les stages"
+              buttonLink="#stage-mongol"
+              backgroundImage="/chaman.jpg"
             />
           </div>
         </div>
       </section>
 
-      {/* Détails du stage spécial */}
+
+
+      {/* Détails du stage chamanisme mongol */}
       <section className="section">
-        <div className="container flow">
-          <h2 id="stage-entities">Stage spécial Entités / Énergies sombres</h2>
-          <p>
-            Nouveau stage en collaboration avec mon amie Céline, énergéticienne spécialisée dans le nettoyage des énergies négatives
-            le week‑end des <strong>22/23/24 août</strong> à Saint‑Vallier‑de‑Thiey (06).
-          </p>
-          <p><strong>Ouvert à tous</strong> — du vendredi 22 août 17h au dimanche 24 août. <strong>440€</strong> logement compris (2 nuits).</p>
-          <h3>Au programme</h3>
-          <ul className="list">
-            <li>Qu'est‑ce qu'une entité / rôle</li>
-            <li>Entre entité et âme errante</li>
-            <li>Travailler sur ses peurs lorsqu'on retire le sombre</li>
-            <li>Repérer les faux guides</li>
-            <li>Découvrir ses protections</li>
-            <li>L'emprise des pervers narcissiques</li>
-            <li>Le désenvoûtement et le retrait des entités</li>
-            <li>L'auto‑envoûtement</li>
-            <li>Malédictions / magie noire</li>
-            <li>Les entités sur les lignées familiales</li>
-            <li>Les pactes dans d'autres vies</li>
-            <li>Exercices pratiques / voyages chamaniques</li>
-            <li>Cérémonie d'engagement envers la lumière</li>
-          </ul>
-          <h3>Pourquoi ce stage ?</h3>
-          <p>
-            Avez‑vous remarqué que de plus en plus de personnes vont mal ? Il y a un lien avec les énergies négatives qui ont
-            un impact considérable sur notre quotidien. Le fait d'en être conscient, de connaître leur mécanisme et surtout d'apprendre
-            à se vérifier et se nettoyer est vital pour garder une stabilité pérenne.
-          </p>
+        <div className="container">
+          <h2 id="stage-mongol" style={{ textAlign: 'center', marginBottom: '3rem' }}>Chamanisme Mongol Traditionnel avec Mooggii</h2>
+          
+          <div className="grid-2" style={{ alignItems: 'flex-start', gap: '3rem' }}>
+            <div className="flow">
+              <p>
+                <strong>Déplacement exceptionnel en France d'un Chaman Mongol traditionnel</strong><br/>
+                Mooggii, Chaman Blanc de 25 ans d'expérience, faisant partie de l'association « Maison de lumière » garantissant son travail, 
+                sera accompagné de Chimegma, traductrice Franco-Mongole et directrice de l'agence de voyage en Mongolie Orsoo Voyages.
+              </p>
+              
+              <h3>Dates et lieux</h3>
+              <div className="grid-2">
+                <div>
+                  <h4>Week-end du 14/15/16 novembre</h4>
+                  <p><strong>Montauroux (83)</strong></p>
+                </div>
+                <div>
+                  <h4>Week-end du 21/22/23 novembre</h4>
+                  <p><strong>Saint-Vallier-de-Thiey (06)</strong></p>
+                </div>
+              </div>
+
+              <h3>Au programme</h3>
+              <ul className="list">
+                <li>Enseignement de Chamanisme Mongol traditionnel avec traductrice</li>
+                <li>Cérémonies du feu</li>
+                <li>Incorporation des Oracles (Ancêtres)</li>
+                <li>Repas et petits déjeuners compris</li>
+                <li>Cuisine mongole traditionnelle préparée par une cuisinière</li>
+              </ul>
+
+              <h3>Tarifs et services</h3>
+              <ul className="list">
+                <li><strong>490€</strong> - Stage complet (repas et petits déjeuners compris)</li>
+                <li><strong>80€</strong> - Consultation privée avec le Chaman</li>
+                <li><strong>80€</strong> - Massage-soin</li>
+                <li><em>Logement à prévoir</em></li>
+              </ul>
+
+              <div className="alert">
+                <p>
+                  <strong>Important :</strong> Ces dates sont conditionnées par l'attribution de son visa en France. 
+                  Ce stage sera très demandé, réservez votre place dès maintenant.
+                </p>
+              </div>
+            </div>
+            
+            <div style={{ position: 'sticky', top: '2rem' }}>
+              <img 
+                src="/chaman.jpg" 
+                alt="Mooggii, Chaman Mongol traditionnel" 
+                style={{ 
+                  width: '100%', 
+                  height: 'auto', 
+                  borderRadius: '12px',
+                  boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)',
+                  objectFit: 'cover',
+                  maxHeight: '600px'
+                }} 
+              />
+            </div>
+          </div>
         </div>
       </section>
 
