@@ -42,7 +42,7 @@ export default function StagesPage() {
           <h2 id="stage-mongol" style={{ textAlign: 'center', marginBottom: '3rem' }}>Chamanisme Mongol Traditionnel avec Mooggii</h2>
           
           <div className="grid-2" style={{ alignItems: 'flex-start', gap: '3rem' }}>
-            <div className="flow">
+            <div className="flow" style={{ position: 'sticky', top: '2rem' }}>
               <p>
                 <strong>Déplacement exceptionnel en France d'un Chaman Mongol traditionnel</strong><br/>
                 Mooggii, Chaman Blanc de 25 ans d'expérience, faisant partie de l'association « Maison de lumière » garantissant son travail, 
@@ -86,7 +86,7 @@ export default function StagesPage() {
               </div>
             </div>
             
-            <div style={{ position: 'sticky', top: '2rem' }}>
+            <div>
               <img 
                 src="/chaman.jpg" 
                 alt="Mooggii, Chaman Mongol traditionnel" 
@@ -97,6 +97,32 @@ export default function StagesPage() {
                   boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)',
                   objectFit: 'cover',
                   maxHeight: '600px'
+                }} 
+              />
+              <img 
+                src="/salle1.jpg" 
+                alt="Salle 1" 
+                style={{ 
+                  width: '100%', 
+                  height: 'auto', 
+                  borderRadius: '12px',
+                  boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)',
+                  objectFit: 'cover',
+                  marginTop: '2rem',
+                  maxHeight: '400px'
+                }} 
+              />
+              <img 
+                src="/salle2.jpg" 
+                alt="Salle 2" 
+                style={{ 
+                  width: '100%', 
+                  height: 'auto', 
+                  borderRadius: '12px',
+                  boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)',
+                  objectFit: 'cover',
+                  marginTop: '2rem',
+                  maxHeight: '400px'
                 }} 
               />
             </div>

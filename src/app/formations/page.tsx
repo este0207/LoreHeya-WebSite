@@ -192,60 +192,76 @@ export default function FormationsPage() {
           <hr />
 
           <h2 id="programme-vert">Programme Chamanisme Vert</h2>
-          <p><em>Guérison par les plantes</em></p>
-          <p>Condition: Avoir suivi le cursus du chamanisme blanc</p>
-
           <h3>Module 1</h3>
           <ul className="list">
-            <li>Élément, Élémentaire, Élémental</li>
-            <li>Le peuple de la nature</li>
-            <li>Rencontre avec les Esprits de l’eau</li>
-            <li>Rencontre avec les Esprits de l’air</li>
-            <li>Rencontre avec les Esprits de la terre</li>
+            <li>Introduction au chamanisme vert : élément, élémentaire, elemental</li>
+            <li>Le monde du milieu et le petit peuple, relation avec le gardien des lieux</li>
+            <li>Rencontre avec les esprits de la terre</li>
+            <li>Rencontre avec les esprits de l’air</li>
+            <li>Rencontre avec les esprits de l’eau</li>
           </ul>
-
           <h3>Module 2</h3>
           <ul className="list">
-            <li>Rencontre avec les Esprits du feu, Cérémonie du feu</li>
-            <li>Création de talismans chamaniques chargés et Ongod</li>
-            <li>Travail et soins avec les esprits de la nature</li>
-            <li>Création d'un talisman Ongon de protection</li>
+            <li>Structuration de l’eau, les 8 mondes de l’eau, les offrandes au monde de l’eau / Découvrir notre élément principal</li>
+            <li>Offrandes : quelle sorte, qui, comment, quand ? Offrandes aux esprits de la nature / Offrandes aux astres : lune, soleil, gardiens des montagnes, respect et communion avec eux (offrandes au lever du soleil…) / Création d’un talisman pour la Terre</li>
+            <li>Rencontre avec les esprits du feu / structure du feu</li>
+            <li>La cérémonie du feu : quand, comment, pour quelle intention</li>
           </ul>
-
           <h3>Module 3</h3>
           <ul className="list">
-            <li>Plante de Pouvoir</li>
-            <li>Pierres de Pouvoir</li>
-            <li>Guérison avec les pierres et les plantes médecines</li>
-            <li>Remise de diplômes</li>
+            <li>Création de talismans chamaniques chargés et Ongod (des ancêtres)</li>
+            <li>Plantes de pouvoir</li>
+            <li>Travail avec les plantes</li>
+            <li>Soin addiction tabac / cannabis</li>
           </ul>
+          <h3>Module 4</h3>
+          <ul className="list">
+            <li>Pierres de pouvoir</li>
+            <li>Travail avec les pierres</li>
+            <li>Travail et soins avec les esprits de la nature</li>
+            <li>Remise de diplôme</li>
+          </ul>
+          <p><strong>Sur 4 mois, 95 euros par mois</strong></p>
 
           <hr />
 
-          <h2 id="programme-avance">Chamanisme Avancé</h2>
+          <h2 id="programme-avance">Programme Chamanisme Avancé</h2>
           <h3>Module 1</h3>
           <ul className="list">
             <li>Diagnostique de dégagement des lieux</li>
             <li>Fermeture des vortex</li>
             <li>Dégagement des mémoires négatives dans un lieu</li>
-            <li>Dégagement des âmes perdues dans un lieu</li>
+            <li>Dégagement des âmes perdues récalcitrantes</li>
           </ul>
-
           <h3>Module 2</h3>
           <ul className="list">
-            <li>Régler les problèmes telluriques</li>
-            <li>Nettoyage des entités dans un lieu</li>
-            <li>Protection des lieux après nettoyage profond</li>
-            <li>Diagnostique magie noire</li>
+            <li>Problèmes telluriques</li>
+            <li>Retrait d'Entités dans un lieu ou sur un objet</li>
+            <li>Nettoyage du feu bleu - Royaume des morts</li>
+            <li>Protection des lieux</li>
           </ul>
-
           <h3>Module 3</h3>
           <ul className="list">
-            <li>Désenvoûtements</li>
-            <li>Dégager les malédictions d’une personne ou d'une famille</li>
-            <li>Alliés de protection</li>
-            <li>Remise de Diplôme</li>
+            <li>Diagnostique de magie noire</li>
+            <li>Désenvoûtement Rituels</li>
+            <li>Désenvoûtement Soin</li>
+            <li>Dégagement des malédictions</li>
           </ul>
+          <h3>Module 4</h3>
+          <ul className="list">
+            <li>Activation des talents dans l'ADN</li>
+            <li>Médecine des 4 éléments</li>
+            <li>Couper Les égrégores et les pactes des autres vies</li>
+            <li>Retrait d'Entités sur les lignées</li>
+          </ul>
+          <h3>Module 5</h3>
+          <ul className="list">
+            <li>Protection des ancêtres</li>
+            <li>Holly Room Oracles/ Relayeurs</li>
+            <li>Talismans de protection ONGON</li>
+            <li>Remise de diplôme</li>
+          </ul>
+          <p><strong>Sur 5 mois, 95 euros par mois</strong></p>
 
           <div className="CardContainer">
             <Card
