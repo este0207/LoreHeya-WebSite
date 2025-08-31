@@ -37,7 +37,7 @@ export default function FormationsPage() {
             <li>En stages en présentiel dans le 06.</li>
             <li>
               Sur la plateforme de formations, seul·e à son rythme, via des vidéos pré‑enregistrées —
-              voir la section <a href="#plateforme">Plateforme</a>.
+              voir la section <a href="https://ecoledechamanisme.teachizy.fr/?fbclid=IwY2xjawMhSCdleHRuA2FlbQIxMQABHlWoY6FFy1X422fKeZ0IHsXekwJeUbHhxtWzfDTNjrf_AU2jrEYgIKeEsvrU_aem_8rnFE32QyzZcQ9ahw2S5cQ">Plateforme</a>.
             </li>
             <li>Chaque semaine en visioconférences par petits groupes pendant 9 mois, sur inscription.</li>
           </ul>

@@ -68,7 +68,7 @@ export default function Page() {
         <Card
           title="Plateforme de formation"
           description="Rééquilibrage, libération, ancrage."
-          buttonText="Voir les soins"
+          buttonText="Accéder a la plateform"
           buttonLink="https://ecoledechamanisme.teachizy.fr/?fbclid=IwY2xjawMhSCdleHRuA2FlbQIxMQABHlWoY6FFy1X422fKeZ0IHsXekwJeUbHhxtWzfDTNjrf_AU2jrEYgIKeEsvrU_aem_8rnFE32QyzZcQ9ahw2S5cQ"
           isDark
           isCentered
