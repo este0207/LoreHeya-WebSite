@@ -46,7 +46,7 @@ export default function StagesPage() {
               <p>
                 <strong>Déplacement exceptionnel en France d'un Chaman Mongol traditionnel</strong><br/>
                 Mooggii, Chaman Blanc de 25 ans d'expérience, faisant partie de l'association « Maison de lumière » garantissant son travail, 
-                sera accompagné de Chimegma, traductrice Franco-Mongole et directrice de l'agence de voyage en Mongolie Orsoo Voyages.
+                sera accompagné de Chimegma, traductrice Franco-Mongole et directrice de l'agence de voyage en Mongolie Orsoo Voyages et de Lore Heya Chamane.
               </p>
               
               <h3>Dates et lieux</h3>
