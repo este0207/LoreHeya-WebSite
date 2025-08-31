@@ -94,8 +94,8 @@ export default function FormationsPage() {
             <ul className="list">
               <li>Groupes à taille humaine pour un suivi personnalisé.</li>
               <li>Alternance de théorie, pratiques guidées, rituels et intégration.</li>
-              <li>Travail possible en présence (Rhône-Alpes) et à distance.</li>
-              <li>Supports remis: feuilles de route et recommandations d'intégration.</li>
+                              <li>Rencontres d'entraînement & de pratique en présence</li>
+                <li>Supports remis: feuilles de cours</li>
             </ul>
           </div>
           <div className="flow">
@@ -287,44 +287,12 @@ export default function FormationsPage() {
           <div className="faq" style={{ marginTop: 8 }}>
             <details>
               <summary>Initiation – prochain cycle</summary>
-              <p>Présentiel (Rhône-Alpes) et Distanciel. Dates communiquées par email. Places limitées.</p>
-            </details>
-            <details>
-              <summary>Praticien – outils de soin</summary>
-              <p>Admission sur entretien bref pour valider l'adéquation du niveau. Dossier d'inscription sur demande.</p>
-            </details>
-            <details>
-              <summary>Approfondissement – maîtrise</summary>
-              <p>Sur sélection: pratique autonome et référence préalable recommandées.</p>
+              <p>Nouvelle session tous les 6 mois. Places limitées.</p>
             </details>
           </div>
         </div>
       </section>
 
-      {/* Tarifs – indicatifs */}
-      <section className="section">
-        <div className="container">
-          <h2>Tarifs indicatifs</h2>
-          <div className="price-grid">
-            <div className="price-card">
-              <h3>Initiation</h3>
-              <p className="price">à partir de 180€ / journée</p>
-            </div>
-            <div className="price-card">
-              <h3>Praticien</h3>
-              <p className="price">à partir de 220€ / journée</p>
-            </div>
-            <div className="price-card">
-              <h3>Approfondissement</h3>
-              <p className="price">sur devis</p>
-            </div>
-          </div>
-          <p style={{ marginTop: 8, color: '#6b7280' }}>
-            Les tarifs peuvent varier selon la durée, le format et le lieu. Un échéancier est possible. Les informations
-            détaillées et les dates sont envoyées après prise de contact.
-          </p>
-        </div>
-      </section>
 
       {/* Questions fréquentes */}
       <section className="section">

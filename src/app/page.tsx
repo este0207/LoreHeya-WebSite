@@ -69,7 +69,7 @@ export default function Page() {
           title="Plateforme de formation"
           description="Rééquilibrage, libération, ancrage."
           buttonText="Voir les soins"
-          buttonLink="/soins"
+          buttonLink="https://ecoledechamanisme.teachizy.fr/?fbclid=IwY2xjawMhSCdleHRuA2FlbQIxMQABHlWoY6FFy1X422fKeZ0IHsXekwJeUbHhxtWzfDTNjrf_AU2jrEYgIKeEsvrU_aem_8rnFE32QyzZcQ9ahw2S5cQ"
           isDark
           isCentered
           backgroundImage="/home_cards/plateforme.jpeg"
