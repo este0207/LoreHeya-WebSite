@@ -72,7 +72,7 @@ export default function StagesPage() {
 
               <h3>Tarifs et services</h3>
               <ul className="list">
-                <li><strong>490€</strong> - Stage complet (repas et petits déjeuners compris)</li>
+                <li><strong>490€</strong> - Stage (repas et petits déjeuners compris)</li>
                 <li><strong>80€</strong> - Consultation privée avec le Chaman</li>
                 <li><strong>80€</strong> - Massage-soin</li>
                 <li><em>Logement à prévoir</em></li>
