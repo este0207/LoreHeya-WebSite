@@ -104,27 +104,6 @@ export default function StagesPage() {
         </div>
       </section>
 
-      {/* Infos pratiques */}
-      <section className="section">
-        <div className="container grid-2">
-          <div className="flow">
-            <h2>Infos pratiques</h2>
-            <ul className="list">
-              <li>Lieu: Alpes-Maritimes (06). Adresse communiquée après inscription</li>
-              <li>Groupe: 8 à 14 personnes selon le lieu</li>
-              <li>Matériel: tambour non obligatoire pour l'initiation</li>
-            </ul>
-          </div>
-          <div className="flow">
-            <h2>Tarifs & inscription</h2>
-            <ul className="list">
-              <li>Initiation: à partir de 180€ / jour</li>
-              <li>Approfondissement: à partir de 220€ / jour</li>
-              <li>Voyage/rituels: selon programme</li>
-            </ul>
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="section">
