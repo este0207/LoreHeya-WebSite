@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavBar2 from '../components/NavBar2';
-import { useState } from 'react';
+
 
 const photos = [
   "530401683_1498342761343456_2773780068025653957_n.jpg",
@@ -28,37 +28,7 @@ const photos = [
 ];
 
 export default function VoyageMongoliePage() {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
-
-  const openModal = (index: number) => {
-    setSelectedImage(index);
-  };
-
-  const closeModal = () => {
-    setSelectedImage(null);
-  };
-
-  const nextImage = () => {
-    if (selectedImage !== null) {
-      setSelectedImage((selectedImage + 1) % photos.length);
-    }
-  };
-
-  const prevImage = () => {
-    if (selectedImage !== null) {
-      setSelectedImage(selectedImage === 0 ? photos.length - 1 : selectedImage - 1);
-    }
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      closeModal();
-    } else if (e.key === 'ArrowRight') {
-      nextImage();
-    } else if (e.key === 'ArrowLeft') {
-      prevImage();
-    }
-  };
+  
 
   return (
       <main>
@@ -80,171 +50,7 @@ export default function VoyageMongoliePage() {
         </div>
       </section>
 
-      {/* Galerie photo */}
-      <section className="section" style={{background: "#fff"}}>
-        <div className="container">
-          <h2 style={{textAlign: "center", fontFamily: 'Libertinus Serif, serif', fontSize: 32}}>La Mongolie en images</h2>
-          <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16, marginTop: 24}}>
-            {photos.map((file, idx) => (
-              <div 
-                key={file} 
-                style={{
-                  position: "relative", 
-                  width: 260, 
-                  height: 180, 
-                  borderRadius: 12, 
-                  overflow: "hidden", 
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.08)", 
-                  margin: 8,
-                  cursor: "pointer",
-                  transition: "transform 0.2s ease-in-out"
-                }}
-                onClick={() => openModal(idx)}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "scale(1.05)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "scale(1)";
-                }}
-              >
-                <Image
-                  src={`/mongolie/${file}`}
-                  alt={`Voyage Mongolie ${idx+1}`}
-                  fill
-                  style={{objectFit: "cover"}}
-                  sizes="(max-width: 600px) 90vw, 260px"
-                  priority={idx < 3}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Modal pour afficher l'image en grand */}
-      {selectedImage !== null && (
-        <div 
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.9)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 1000,
-            cursor: "pointer"
-          }}
-          onClick={closeModal}
-          onKeyDown={handleKeyDown}
-          tabIndex={0}
-        >
-          <div style={{position: "relative", maxWidth: "90vw", maxHeight: "90vh"}}>
-            <Image
-              src={`/mongolie/${photos[selectedImage]}`}
-              alt={`Voyage Mongolie ${selectedImage + 1}`}
-              width={800}
-              height={600}
-              style={{
-                objectFit: "contain",
-                maxWidth: "100%",
-                maxHeight: "100%"
-              }}
-            />
-            
-            {/* Bouton fermer */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                closeModal();
-              }}
-              style={{
-                position: "absolute",
-                top: -40,
-                right: 0,
-                background: "none",
-                border: "none",
-                color: "white",
-                fontSize: "2rem",
-                cursor: "pointer",
-                padding: "8px"
-              }}
-            >
-              ×
-            </button>
-            
-            {/* Flèche gauche */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                prevImage();
-              }}
-              style={{
-                position: "absolute",
-                left: -60,
-                top: "50%",
-                transform: "translateY(-50%)",
-                background: "rgba(255, 255, 255, 0.2)",
-                border: "none",
-                color: "white",
-                fontSize: "2rem",
-                cursor: "pointer",
-                padding: "12px 16px",
-                borderRadius: "50%",
-                width: "50px",
-                height: "50px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center"
-              }}
-            >
-              ‹
-            </button>
-            
-            {/* Flèche droite */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                nextImage();
-              }}
-              style={{
-                position: "absolute",
-                right: -60,
-                top: "50%",
-                transform: "translateY(-50%)",
-                background: "rgba(255, 255, 255, 0.2)",
-                border: "none",
-                color: "white",
-                fontSize: "2rem",
-                cursor: "pointer",
-                padding: "12px 16px",
-                borderRadius: "50%",
-                width: "50px",
-                height: "50px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center"
-              }}
-            >
-              ›
-            </button>
-            
-            {/* Indicateur de position */}
-            <div style={{
-              position: "absolute",
-              bottom: -40,
-              left: "50%",
-              transform: "translateX(-50%)",
-              color: "white",
-              fontSize: "1rem"
-            }}>
-              {selectedImage + 1} / {photos.length}
-            </div>
-          </div>
-        </div>
-      )}
+      
 
       {/* Description du voyage */}
       <section className="section" id="infos">
@@ -452,6 +258,36 @@ export default function VoyageMongoliePage() {
                 <li>Matériel fourni (tentes, matelas, couvertures, table, chaises de camping)</li>
               </ul>
             </details>
+            <div style={{marginTop: 16}}>
+              <div style={{display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center"}}>
+                {photos.slice(6, 10).map((file, i) => (
+                  <div
+                    key={`altai-thumb-${file}`}
+                    style={{
+                      position: "relative",
+                      width: 220,
+                      height: 150,
+                      borderRadius: 12,
+                      overflow: "hidden",
+                      boxShadow: "0 2px 12px rgba(0,0,0,0.08)"
+                    }}
+                  >
+                    <Image
+                      src={`/mongolie/${file}`}
+                      alt={`Altaï ${i + 1}`}
+                      fill
+                      style={{objectFit: "cover"}}
+                      sizes="(max-width: 600px) 45vw, 220px"
+                      priority={i < 2}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div style={{marginTop: 16, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap"}}>
+              <p style={{margin: 0}}>Pour plus de détails, voir ci dessous :</p>
+              <a href="https://chamanisme-mongolie.com/massage/" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">Voir le site</a>
+            </div>
           </div>
         </div>
       </section>
