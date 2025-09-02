@@ -267,24 +267,111 @@ export default function VoyageMongoliePage() {
         <div className="container flow">
           <h2>Voyages initiatiques 2026</h2>
 
+          {/* Voyage Altaï - 12 au 25 juillet 2026 */}
+          <div style={{marginBottom: 48}}>
+            <h3>Altaï, les massifs mythiques — 12 au 25 juillet 2026</h3>
+            <p>
+              Voyage initiatique au cœur des massifs de l’Altaï, berceau spirituel de la tradition chamanique.
+              Accompagné par Lore Heya et des chamanes mongols, ce parcours vous relie aux rituels ancestraux,
+              au chant diphonique, au tambour et à la guimbarde, pour une exploration des états de conscience,
+              de la purification et de l’énergétisation du corps et de l’esprit.
+            </p>
+            <details>
+              <summary><strong>Programme jour par jour</strong></summary>
+              <ul className="list">
+                <li><strong>12 juillet :</strong> Départ de Francfort (14h30). Vol inclus et non modifiable.</li>
+                <li><strong>13 juillet :</strong> Arrivée à Oulan-Bator. Visite de la ville, nuit en yourte (4–5 pers.).</li>
+                <li><strong>14–16 juillet :</strong> Vol vers Khovd, exploration des massifs de l’Altaï et immersion sous les étoiles.</li>
+                <li><strong>17 juillet :</strong> Rencontre des éleveurs nomades et découverte du sommet sacré Tsambagarav (4 200 m). Début des cérémonies chamaniques.</li>
+                <li><strong>18 juillet :</strong> Vallée Khokh Serkh, rituels au pied de la chaîne de l’Altaï autour du Feu primordial.</li>
+                <li><strong>19 juillet :</strong> Khovd → vallées de l’Altaï, vues sur glaciers et rencontre de fauconniers kazakhs.</li>
+                <li><strong>20–21 juillet :</strong> Steppes de Zavkhan, désert d’herbes, campements nomades et yaks.</li>
+                <li><strong>22 juillet :</strong> Lac Khyargas Telmen, eaux cristallines, refuge des oiseaux migrateurs.</li>
+                <li><strong>23 juillet :</strong> Montagnes de Karakhorum, monastère Erdene Zuu, arrivée tardive à Oulan-Bator.</li>
+                <li><strong>24 juillet :</strong> Journée culturelle à Oulan-Bator (monastère Gandan, marché local), dîner d’adieu sous la yourte.</li>
+                <li><strong>25 juillet :</strong> Vol retour vers la France (arrivée 13h10 à Francfort).</li>
+              </ul>
+            </details>
+            <details>
+              <summary><strong>Tarif et inclusions</strong></summary>
+              <ul className="list">
+                <li><strong>Prix :</strong> 3 790 € TTC</li>
+                <li><strong>Transport :</strong> A/R Francfort ↔ Oulan-Bator en éco, Oulan-Bator → Khovd (aller simple).</li>
+                <li><strong>Hébergement :</strong> Tentes/bivouacs sauvages dans les steppes + nuits en yourte à Oulan-Bator.</li>
+                <li><strong>Encadrement :</strong> Chamanes mongols, cours et enseignements de Loreia, guide francophone et équipe locale.</li>
+                <li><strong>Repas :</strong> Tous les repas inclus sauf un déjeuner à Oulan-Bator.</li>
+                <li><strong>Activités :</strong> Droits d’entrée des parcs, musées et sites mentionnés.</li>
+              </ul>
+              <p style={{marginTop: 8}}>
+                <strong>Non compris :</strong> Assurances multirisques, boissons hors thé/café/lait, pourboires et dépenses personnelles,
+                massage par les chamanes (30 € / 1h).
+              </p>
+            </details>
+            <details>
+              <summary><strong>À propos de l’accompagnement</strong></summary>
+              <p>
+                Ce voyage est accompagné par Lore Heya, formée par des chamanes traditionnels, créatrice de l’école Lore Heya
+                chamanisme (enseignements sibériens et mongols). En présence de chamanes mongols, les cérémonies autour du feu
+                vous aident à renouer avec le sacré, développer vos capacités, vous protéger des énergies négatives et retrouver
+                votre chemin de vie. La présence de Loreia facilite les relations et l’intégration des expériences.
+              </p>
+            </details>
+            <div style={{marginTop: 16}}>
+              <div style={{display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center"}}>
+                {photos.slice(0, 4).map((file, i) => (
+                  <div
+                    key={`altai-thumb-${file}`}
+                    style={{
+                      position: "relative",
+                      width: 220,
+                      height: 150,
+                      borderRadius: 12,
+                      overflow: "hidden",
+                      boxShadow: "0 2px 12px rgba(0,0,0,0.08)"
+                    }}
+                  >
+                    <Image
+                      src={`/mongolie/${file}`}
+                      alt={`Altaï ${i + 1}`}
+                      fill
+                      style={{objectFit: "cover"}}
+                      sizes="(max-width: 600px) 45vw, 220px"
+                      priority={i < 2}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div style={{marginTop: 16, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap"}}>
+              <p style={{margin: 0}}>Pour plus de détails, voir le PDF :</p>
+              <a
+                href="/pdf/Altai-2026.pdf"
+                download
+                className="btn btn-ghost"
+              >
+                Télécharger le PDF
+              </a>
+            </div>
+          </div>
+
           {/* Voyage 1 */}
           <div style={{marginBottom: 48}}>
             <h3>Voyage du 27 juillet au 10 août 2026</h3>
             <p>
               Durant ce voyage initiatique, les 4 chamanes seront présents tout le long du séjour afin de vous partager leurs connaissances millénaires et vous guider à travers des cérémonies puissantes. Loin des touristes, vous apprendrez des techniques anciennes pour ancrer votre corps dans la nature majestueuse de la Mongolie. Le programme inclut des moments de purification énergétique, des enseignements, ainsi que des consultations individuelles dans les lieux sacrés de la Mongolie centrale.
             </p>
-            <details>
+            <details open>
               <summary><strong>Programme jour par jour</strong></summary>
               <ul className="list">
-                <li><strong>27 juillet :</strong> Départ de Francfort, vol pour Oulan Bator.</li>
-                <li><strong>28 juillet :</strong> Oulan Bator / Khogno Khan, randonnée, ouverture du cercle avec les chamans.</li>
-                <li><strong>29 juillet :</strong> Ovgunt / Karakorum, visite de l'oasis d'Elsen Tasarkhai et du monastère Erdene Zuu.</li>
-                <li><strong>31 juillet :</strong> Karakorum / Source d'eau chaude naturelle, détente et nuit chez les nomades.</li>
-                <li><strong>1er août :</strong> Séjour chez les nomades de Tsagaan Sum, randonnée vers le temple Tuvkhni.</li>
-                <li><strong>1 au 5 août :</strong> Journées d'échanges et d'apprentissage intense dans la vallée de l'Orkhon.</li>
-                <li><strong>6-7 août :</strong> Séjour au lac Ogui, immersion et détente.</li>
-                <li><strong>8 août :</strong> Retour à Oulan-Bator, soirée conviviale sous la yourte.</li>
-                <li><strong>9 août :</strong> Journée culturelle à Oulan-Bator, visite du monastère Gandan, musée national, spectacle traditionnel.</li>
+                <li><strong>27 juillet :</strong> Départ de Francfort à 14h30 pour Oulan-Bator. Vol A/R inclus (non modifiable). Retour le 10 août à 13h10. Prévoir au moins 3h d’escale à Francfort. Option billets par vous-même: rendez-vous au camp de yourtes le 28 au matin ou à l’aéroport à 7h. Arrivée anticipée possible: transfert privé 60 € et yourte + repas 50 €/jour.</li>
+                <li><strong>28 juillet :</strong> Oulan-Bator → Khogno Khan (Arkhangai). Randonnée ~1h parmi roches ciselées, visite d’un ancien monastère, chevaux en liberté et chameaux. Soir: ouverture du 1er cercle avec les chamanes.</li>
+                <li><strong>29 juillet :</strong> Ovgunt / Karakorum. Oasis d’Elsen Tasarkhai (dunes dorées), visite de Karakorum et du monastère Erdene Zuu. Nuit en yourte cosy au cœur des steppes.</li>
+                <li><strong>31 juillet :</strong> Karakorum → source d’eaux chaudes (Tsagaan sum). Accueil par une famille nomade, bains thermaux (72°C) aux vertus curatives. Dîner traditionnel, nuit en yourte simple et confortable.</li>
+                <li><strong>1er août :</strong> Séjour chez les nomades de Tsagaan Sum. Vues panoramiques, découverte du quotidien nomade. Transfert vers les monts Tuvkhni et randonnée ~3h jusqu’au temple Tuvkhni. Nuit en yourte louée par des éleveurs. (40+20 km en 4×4, faible dénivelé)</li>
+                <li><strong>1 au 5 août :</strong> Immersion dans la vallée de l’Orkhon (parc naturel sacré): cérémonies chamaniques intenses, consultations individuelles, exercices énergétiques guidés. Hébergement sous tentes au cœur des paysages de mélèzes.</li>
+                <li><strong>6–7 août :</strong> Séjour au lac Ogui, lieu contemplatif et poétique. Eaux tranquilles, herbes ondulantes, cavaliers nomades: ressourcement et silence des steppes.</li>
+                <li><strong>8 août :</strong> Retour à Oulan-Bator. Soirée conviviale sous la yourte avec l’équipe locale.</li>
+                <li><strong>9 août :</strong> Journée culturelle à Oulan-Bator: monastère Gandan, musée national, shopping en centre-ville, spectacle traditionnel de chants et danses. Nuit en yourte.</li>
                 <li><strong>10 août :</strong> Retour à Francfort.</li>
               </ul>
             </details>
@@ -297,12 +384,36 @@ export default function VoyageMongoliePage() {
                 <li>Toutes les nuits prévues dans différents logements, camps de yourte, nuits chez les nomades</li>
                 <li>Pension complète durant l'excursion (repas, restaurants, eau, thé)</li>
                 <li>Douches chaudes, transport, port des bagages</li>
+                <li>Transport en bus</li>
                 <li>Interprète francophone, guides locaux, cuisiniers</li>
                 <li>Enseignements des chamanes mongols, cérémonies, consultations individuelles</li>
                 <li>Droits d'entrée des parcs, musées, spectacle traditionnel mongol</li>
                 <li>Matériel fourni (tentes, matelas, couvertures, table, chaises de camping)</li>
               </ul>
             </details>
+            <div style={{marginTop: 16}}>
+              <div style={{display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center", marginTop: 8}}>
+                {photos.slice(12, 16).map((file, i) => (
+                  <div
+                    key={`trip1-thumb-${file}`}
+                    style={{position: "relative", width: 220, height: 150, borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.08)"}}
+                  >
+                    <Image
+                      src={`/mongolie/${file}`}
+                      alt={`Voyage fin juillet ${i + 1}`}
+                      fill
+                      style={{objectFit: "cover"}}
+                      sizes="(max-width: 600px) 45vw, 220px"
+                      priority={i < 2}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div style={{marginTop: 16, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap"}}>
+              <p style={{margin: 0}}>Pour plus de détails, voir le PDF :</p>
+              <a href="/pdf/Voyage du 27 juillet au 10 Aout Lore Heya-1.pdf" download className="btn btn-ghost">Télécharger le PDF</a>
+            </div>
           </div>
 
           {/* Voyage 2 */}
