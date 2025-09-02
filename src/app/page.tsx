@@ -56,7 +56,7 @@ export default function Page() {
       </section>
       <div className="home-card-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 40, margin: '40px 0' }}>
         <Card
-          title="Voyage en Mongolie"
+          title="Voyages en Mongolie"
           description="Immersion chamanique au cœur des steppes."
           buttonText="Découvrir le voyage"
           buttonLink="/Voyage_Mongolie"

@@ -149,14 +149,8 @@ export default function VoyageMongoliePage() {
               </div>
             </div>
             <div style={{marginTop: 16, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap"}}>
-              <p style={{margin: 0}}>Pour plus de détails, voir le PDF :</p>
-              <a
-                href="/pdf/Altai-2026.pdf"
-                download
-                className="btn btn-ghost"
-              >
-                Télécharger le PDF
-              </a>
+              <p style={{margin: 0}}>voir ci dessous</p>
+              <Link href="/Voyage_Mongolie/1" className="btn btn-ghost">Voir la page</Link>
             </div>
           </div>
 
@@ -217,78 +211,12 @@ export default function VoyageMongoliePage() {
               </div>
             </div>
             <div style={{marginTop: 16, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap"}}>
-              <p style={{margin: 0}}>Pour plus de détails, voir le PDF :</p>
-              <a href="/pdf/Voyage du 27 juillet au 10 Aout Lore Heya-1.pdf" download className="btn btn-ghost">Télécharger le PDF</a>
+              <p style={{margin: 0}}>voir ci dessous</p>
+              <Link href="/Voyage_Mongolie/2" className="btn btn-ghost">Voir la page</Link>
             </div>
           </div>
 
           {/* Voyage 2 */}
-          <div>
-            <h3>Voyage du 12 au 26 août 2026</h3>
-            <p>
-              Voyage d'apprentissage des massages Yumeiho avec les Chamans. Durant ce voyage initiatique, les 4 chamanes seront présents tout le long du séjour afin de vous partager leurs connaissances millénaires et vous guider à travers des cérémonies puissantes. Vous apprendrez des techniques de manipulation du corps et de massage selon la tradition Japonaise Yumeiho afin de réharmoniser les corps énergétiques et physiques. Le programme inclut des moments de purification énergétique, des enseignements, ainsi que des consultations individuelles dans les lieux sacrés de la Mongolie centrale.
-            </p>
-            <details>
-              <summary><strong>Programme jour par jour</strong></summary>
-              <ul className="list">
-                <li><strong>12 août :</strong> Départ de Francfort, vol pour Oulan Bator.</li>
-                <li><strong>13 août :</strong> Oulan Bator / Khogno Khan, randonnée, ouverture du cercle avec les chamans.</li>
-                <li><strong>14 août :</strong> Ovgunt / Karakorum, visite de l'oasis d'Elsen Tasarkhai et du monastère Erdene Zuu.</li>
-                <li><strong>15 août :</strong> Karakorum / Source d'eau chaude naturelle, détente et nuit chez les nomades.</li>
-                <li><strong>16 août :</strong> Séjour chez les nomades de Tsagaan Sum, randonnée vers le temple Tuvkhni.</li>
-                <li><strong>17 au 21 août :</strong> Journées d'échanges et d'apprentissage intense dans la vallée de l'Orkhon.</li>
-                <li><strong>22 au 24 août :</strong> Séjour au lac Ogui, immersion et détente.</li>
-                <li><strong>24 août :</strong> Retour à Oulan-Bator, soirée conviviale sous la yourte.</li>
-                <li><strong>25 août :</strong> Journée culturelle à Oulan-Bator, visite du monastère Gandan, musée national, spectacle traditionnel.</li>
-                <li><strong>26 août :</strong> Retour à Francfort.</li>
-              </ul>
-            </details>
-            <details>
-              <summary><strong>Infos pratiques</strong></summary>
-              <ul className="list">
-                <li>Prix : 3490 € TTC au départ de Francfort</li>
-                <li>Transferts aéroport / yourte / aéroport inclus</li>
-                <li>Billet d'avion A/R au départ de Francfort inclus</li>
-                <li>Toutes les nuits prévues dans différents logements, camps de yourte, nuits chez les nomades</li>
-                <li>Pension complète durant l'excursion (repas, restaurants, eau, thé)</li>
-                <li>Douches chaudes, transport, port des bagages</li>
-                <li>Interprète francophone, guides locaux, cuisiniers</li>
-                <li>Enseignements des chamanes mongols, cérémonies, consultations individuelles</li>
-                <li>Droits d'entrée des parcs, musées, spectacle traditionnel mongol</li>
-                <li>Matériel fourni (tentes, matelas, couvertures, table, chaises de camping)</li>
-              </ul>
-            </details>
-            <div style={{marginTop: 16}}>
-              <div style={{display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center"}}>
-                {photos.slice(6, 10).map((file, i) => (
-                  <div
-                    key={`altai-thumb-${file}`}
-                    style={{
-                      position: "relative",
-                      width: 220,
-                      height: 150,
-                      borderRadius: 12,
-                      overflow: "hidden",
-                      boxShadow: "0 2px 12px rgba(0,0,0,0.08)"
-                    }}
-                  >
-                    <Image
-                      src={`/mongolie/${file}`}
-                      alt={`Altaï ${i + 1}`}
-                      fill
-                      style={{objectFit: "cover"}}
-                      sizes="(max-width: 600px) 45vw, 220px"
-                      priority={i < 2}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div style={{marginTop: 16, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap"}}>
-              <p style={{margin: 0}}>Pour plus de détails, voir ci dessous :</p>
-              <a href="https://chamanisme-mongolie.com/massage/" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">Voir le site</a>
-            </div>
-          </div>
         </div>
       </section>
 
