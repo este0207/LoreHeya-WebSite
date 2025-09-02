@@ -65,6 +65,16 @@ const DEFAULT_FAQ: FaqItem[] = [
     question: `Pour qui sont vos formations?`,
     answer: `Toutes personnes qui souhaitent apprendre à guérir leurs propres blessures ou en faire un métier afin d'aider les autres à guérir les leurs.\nDébutants comme thérapeutes sont bienvenus.`,
   },
+  {
+    id: 'formation-devenir-chaman',
+    question: `Est-ce que cette formation forme pour devenir Chaman ?`,
+    answer: `Pas pour devenir un Chaman mais un praticien en chamanisme.\nIl est délivré un diplôme en fin de formation qui atteste de votre sérieux au niveau de votre pratique.`,
+  },
+  {
+    id: 'definition-praticien-chamanisme',
+    question: `Qu'est-ce qu'un praticien en chamanisme ?`,
+    answer: `C'est un thérapeute qui se sert des outils du chamanisme pour soigner les autres.\nIl peut avoir plusieurs outils à proposer, il peut avoir toutes les capacités d'un Chaman et est tout aussi légitime.\nLa seule différence est dans l'appellation et la marque dans l'âme.`,
+  },
 ];
 
 function useCommentsApi(page: string) {
