@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import Card from '../components/Card';
 import NavBar2 from '../components/NavBar2';
 
 
@@ -50,6 +51,30 @@ export default function VoyageMongoliePage() {
         </div>
       </section>
 
+      {/* Choix rapide des itinéraires (style formations) */}
+      <section className="section" id="choix-itineraires">
+        <div className="container">
+          <div className="CardContainer">
+            <Card
+              title="Altaï, les massifs mythiques"
+              description="12 → 25 juillet 2026 — Voyage initiatique au cœur des massifs mythiques."
+              buttonText="Voir le programme"
+              buttonLink="#altai"
+              isDark
+              backgroundImage={`/mongolie/${photos[12]}`}
+            />
+            <Card
+              title="Karakorum & Orkhon"
+              description="27 juillet → 10 août 2026 — Steppes, sources chaudes et rituels."
+              buttonText="Voir le programme"
+              buttonLink="#orkhon"
+              isDark={false}
+              backgroundImage={`/mongolie/${photos[15]}`}
+            />
+          </div>
+        </div>
+      </section>
+
       
 
       {/* Description du voyage */}
@@ -74,7 +99,7 @@ export default function VoyageMongoliePage() {
           <h2>Voyages initiatiques 2026</h2>
 
           {/* Voyage Altaï - 12 au 25 juillet 2026 */}
-          <div style={{marginBottom: 48}}>
+          <div style={{marginBottom: 48}} id="altai">
             <h3>Altaï, les massifs mythiques — 12 au 25 juillet 2026</h3>
             <p>
               Voyage initiatique au cœur des massifs de l’Altaï, berceau spirituel de la tradition chamanique.
@@ -150,17 +175,17 @@ export default function VoyageMongoliePage() {
             </div>
             <div style={{marginTop: 16, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap"}}>
               <p style={{margin: 0}}>voir ci dessous</p>
-              <Link href="/Voyage_Mongolie/1" className="btn btn-ghost">Voir la page</Link>
+              <Link href="/Voyage_Mongolie/1" className="btn btn-ghost">Voir tout le programme</Link>
             </div>
           </div>
 
           {/* Voyage 1 */}
-          <div style={{marginBottom: 48}}>
+          <div style={{marginBottom: 48}} id="orkhon">
             <h3>Voyage du 27 juillet au 10 août 2026</h3>
             <p>
               Durant ce voyage initiatique, les 4 chamanes seront présents tout le long du séjour afin de vous partager leurs connaissances millénaires et vous guider à travers des cérémonies puissantes. Loin des touristes, vous apprendrez des techniques anciennes pour ancrer votre corps dans la nature majestueuse de la Mongolie. Le programme inclut des moments de purification énergétique, des enseignements, ainsi que des consultations individuelles dans les lieux sacrés de la Mongolie centrale.
             </p>
-            <details open>
+            <details>
               <summary><strong>Programme jour par jour</strong></summary>
               <ul className="list">
                 <li><strong>27 juillet :</strong> Départ de Francfort à 14h30 pour Oulan-Bator. Vol A/R inclus (non modifiable). Retour le 10 août à 13h10. Prévoir au moins 3h d’escale à Francfort. Option billets par vous-même: rendez-vous au camp de yourtes le 28 au matin ou à l’aéroport à 7h. Arrivée anticipée possible: transfert privé 60 € et yourte + repas 50 €/jour.</li>
@@ -212,7 +237,7 @@ export default function VoyageMongoliePage() {
             </div>
             <div style={{marginTop: 16, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap"}}>
               <p style={{margin: 0}}>voir ci dessous</p>
-              <Link href="/Voyage_Mongolie/2" className="btn btn-ghost">Voir la page</Link>
+              <Link href="/Voyage_Mongolie/2" className="btn btn-ghost">Voir tout le programme</Link>
             </div>
           </div>
 

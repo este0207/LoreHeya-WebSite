@@ -25,7 +25,7 @@ export default function ContactPage() {
   const mailtoLink = (() => {
     const subject = formState.subject && formState.subject.trim().length > 0 ? formState.subject : 'Contact';
     const body = `Nom: ${formState.fullName}\nEmail: ${formState.email}\n\n${formState.message}`;
-    return `mailto:esteban.h0207@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    return `mailto:loreia.bionature@yahoo.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   })();
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {

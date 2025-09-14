@@ -118,49 +118,142 @@ export default function AltaiDetailPage() {
           <details open>
             <summary><strong>Jour par jour</strong></summary>
             <ul className="list">
-              <li>
+              <li style={{background:"#fff",padding:16,borderRadius:12,boxShadow:"0 6px 18px rgba(0,0,0,0.08)",marginBottom:16}}>
                 <strong>12 juillet 2026 — Départ de Francfort (Allemagne)</strong><br/>
-                Les billets d’avion A/R au départ de Francfort sont inclus. Vol aller à 14h30 le 12 juillet et retour le 25 juillet 2026 à 13h10. Prévoir une marge suffisante pour l’escale à Francfort.
+                Les billets d’avion aller-retour au départ de Francfort sont inclus dans le
+forfait. Les dates de vol ne sont pas modifiables. Le vol pour la Mongolie
+décolle de Francfort à 14h30 le 12 juillet et le retour est prévu le 25 Juillet
+2026 à 13h10. Nous vous conseillons de prévoir suffisamment de temps
+pour l’escale à Francfort, car c’est un aéroport très fréquenté.
               </li>
-              <li>
+              <div style={{position:"relative",width:"100%",maxWidth:800,aspectRatio:"16/9",margin:"12px auto 24px",borderRadius:14,overflow:"hidden",boxShadow:"0 10px 30px rgba(0,0,0,0.12)"}}>
+                <Image src="/mongolie/530560164_680338788395195_8972370088142792425_n.jpg" alt="Vol vers la Mongolie" fill sizes="(max-width: 768px) 100vw, 800px" quality={85} style={{objectFit:"cover"}} />
+              </div>
+              <li style={{background:"#fff",padding:16,borderRadius:12,boxShadow:"0 6px 18px rgba(0,0,0,0.08)",marginBottom:16}}>
                 <strong>13 juillet 2026 — Arrivée à Oulan-Bator</strong><br/>
-                Découverte de la capitale entre modernité et traditions. Visite de la ville après le petit-déjeuner. Nuit en yourtes traditionnelles (4 à 5 personnes).
+                Arrivée dans la capitale mongole, Oulan-Bator, où vous serez immergés dans
+une ville à la croisée des mondes moderne et traditionnel. Après le petit
+déjeuner, une visite de la ville vous permettra de découvrir le contraste
+saisissant entre ses monastères ancestraux et ses quartiers modernes. En
+fin de journée, vous aurez l’occasion de vous reposer dans des yourtes
+traditionnelles, partagées à 4 ou 5 personnes.
               </li>
-              <li>
+              <li style={{background:"#fff",padding:16,borderRadius:12,boxShadow:"0 6px 18px rgba(0,0,0,0.08)",marginBottom:16}}>
                 <strong>14–16 juillet 2026 — Exploration des massifs de l’Altaï</strong><br/>
-                Vol vers l’ouest mongol, province de Khovd, terre de rencontres entre Kazakhs et Mongols. Immersion sous les étoiles, nuits en tente, paysages grandioses et traditions préservées.
+                Nous nous envolons vers l’ouest de la Mongolie, direction Khovd, une
+province où les Kazakh, de culture islamique, vivent en harmonie avec les
+Mongols depuis des générations. Ici, dans ce lieu de rencontres ancestrales,
+le ciel semble s’étendre à l’infini, et les steppes cachent des secrets
+millénaires. Chaque souffle d’air transporte les légendes de peuples
+nomades, et à l’arrivée, une atmosphère mystique vous enveloppera. Vous
+serez émerveillés par les traditions préservées de ces ethnies, unis par une
+paix séculaire. Sous un ciel étoilé, la nuit en tente, bercée par les murmures
+du vent, vous plongera dans une expérience unique, en parfaite communion avec la nature sauvage et intacte.
               </li>
-              <li>
+              <li style={{background:"#fff",padding:16,borderRadius:12,boxShadow:"0 6px 18px rgba(0,0,0,0.08)",marginBottom:16}}>
                 <strong>17 juillet 2026 — Des steppes à la montagne, sommet Tsambagarav</strong><br/>
-                Rencontre des éleveurs nomades. Découverte du sommet sacré Tsambagarav (4 200 m). Installation près d’un campement kazakh et premières cérémonies chamaniques.
+                Nous entamons une journée extraordinaire qui nous mènera à la rencontre
+des éleveurs nomades installés dans les steppes verdoyantes, au bord des
+rivières scintillantes. Au fil du chemin, le paysage se transforme et nous
+laisse découvrir le majestueux sommet Tsambagarav, dominant l’horizon à 4
+200 mètres d’altitude. Ce sommet sacré, couvert de glaciers étincelants, est
+vénéré par les Kazakhs nomades qui y voient un protecteur spirituel des
+montagnes.
+Nous atteindrons un campement kazakh fait de pierres sèches, un lieu
+empreint de sérénité où nous commencerons notre immersion chamanique.
+Les chamanes mongols, avec la montagne en toile de fond, entameront leurs
+premières cérémonies, renforçant l’intensité spirituelle de cette étape, tandis
+que la beauté brute du Tsambagarav veille sur nous.
               </li>
-              <li>
+              <div style={{position:"relative",width:"100%",maxWidth:800,aspectRatio:"16/9",margin:"12px auto 24px",borderRadius:14,overflow:"hidden",boxShadow:"0 10px 30px rgba(0,0,0,0.12)"}}>
+                <Image src="/mongolie/533405572_1930248241162213_648155219399365275_n.jpg" alt="Tsambagarav" fill sizes="(max-width: 768px) 100vw, 800px" quality={85} style={{objectFit:"cover"}} />
+              </div>
+              <li style={{background:"#fff",padding:16,borderRadius:12,boxShadow:"0 6px 18px rgba(0,0,0,0.08)",marginBottom:16}}>
                 <strong>18 juillet 2026 — Vallée Khokh Serkh</strong><br/>
-                Rituels au pied de la chaîne de l’Altaï autour du Feu primordial, dans un décor de vallées encaissées et montagnes abruptes.
+                Aujourd’hui, nous pénétrons dans les vallées encaissées qui bordent le mont
+Tsambagarav, un lieu où la nature révèle toute sa grandeur. Les montagnes
+abruptes qui s’élèvent de chaque côté créent un spectacle à couper le
+souffle, et on raconte que c’est ici que l’humain aurait reçu le véritable
+cadeau du Père Ciel : le Feu, source de civilisation de l’Homme. C’est autour
+du Feu que les peuples nomades ont forgé leur organisation sociale et leurs
+connaissances, perpétuant ainsi des traditions ancestrales toujours vivantes.
+Faire un rituel au pied de la chaîne de l’Altaï est un véritable honneur. Ces
+montagnes, sacrées et majestueuses, sont le berceau de légendes et
+d’histoires anciennes. Se tenir dans leur ombre pour célébrer un rituel
+chamanique, c’est entrer en communion avec des forces ancestrales,
+comme le feu que le Père Ciel aurait offert à l’humanité. Ici, entourés par la
+puissance des éléments, vous ressentirez toute la sacralité du lieu, où la
+nature et l’esprit humain se rencontrent dans une harmonie profonde et
+intemporelle.
               </li>
-              <li>
+              <li style={{background:"#fff",padding:16,borderRadius:12,boxShadow:"0 6px 18px rgba(0,0,0,0.08)",marginBottom:16}}>
                 <strong>19 juillet 2026 — Khovd → Vallées de l’Altaï</strong><br/>
-                Traversées de paysages majestueux, glaciers et rencontres avec des fauconniers kazakhs.
+                Ce voyage entre Khovd et Oulan-Bator vous mènera à travers les plus beaux
+paysages de Mongolie, alliant montagnes majestueuses, steppes infinies et
+vallées mystérieuses. Nous quitterons Khovd et ses richesses culturelles
+pour plonger dans les montagnes de l’Altaï, où se dressent des pics
+enneigés et des vallées profondes. Nous passerons à proximité du célèbre
+sommet Tsambagarav, dont la vue imprenable sur les glaciers inspire respect
+et admiration. Ce sera l’occasion de rencontrer des éleveurs kazakhs, tout
+en admirant leurs faucons et aigles majestueux.
               </li>
-              <li>
+              <div style={{position:"relative",width:"100%",maxWidth:800,aspectRatio:"16/9",margin:"12px auto 24px",borderRadius:14,overflow:"hidden",boxShadow:"0 10px 30px rgba(0,0,0,0.12)"}}>
+                <Image src="/mongolie/531649705_1345710750281118_8245615143585033035_n.jpg" alt="Vallées de l’Altaï" fill sizes="(max-width: 768px) 100vw, 800px" quality={85} style={{objectFit:"cover"}} />
+              </div>
+              <li style={{background:"#fff",padding:16,borderRadius:12,boxShadow:"0 6px 18px rgba(0,0,0,0.08)",marginBottom:16}}>
                 <strong>20–21 juillet 2026 — Steppes de Zavkhan</strong><br/>
-                Désert d’herbes dorées, dunes ondulantes, haltes chez des nomades et immersion dans la vie pastorale.
+                La route nous mènera ensuite à travers la steppe de Zavkhan, un désert
+d’herbes dorées à perte de vue, parsemé de dunes qui ondulent sous la
+brise. Ce paysage offre une tranquillité presque mystique, interrompue par
+les cavaliers nomades et leurs troupeaux de yaks. Nous ferons halte dans
+des campements nomades, où l’hospitalité mongole se révélera dans toute
+sa simplicité.
               </li>
-              <li>
+              <div style={{position:"relative",width:"100%",maxWidth:800,aspectRatio:"16/9",margin:"12px auto 24px",borderRadius:14,overflow:"hidden",boxShadow:"0 10px 30px rgba(0,0,0,0.12)"}}>
+                <Image src="/mongolie/530687478_636555722400817_4250467426786029970_n.jpg" alt="Steppes de Zavkhan" fill sizes="(max-width: 768px) 100vw, 800px" quality={85} style={{objectFit:"cover"}} />
+              </div>
+              <li style={{background:"#fff",padding:16,borderRadius:12,boxShadow:"0 6px 18px rgba(0,0,0,0.08)",marginBottom:16}}>
                 <strong>22 juillet 2026 — Lac Khyargas Telmen</strong><br/>
-                Étendue d’eau cristalline et sauvage, refuge d’oiseaux migrateurs. Contemplation et coucher de soleil inoubliable.
+                Le lac Khyargas Telmen est une étendue d’eau cristalline nichée au cœur de
+la Mongolie occidentale, dans la province de Zavkhan. Il s’étire sur des
+kilomètres, entouré de paysages arides et rocailleux, offrant un contraste
+saisissant avec son eau bleu profond. Ce lac salé, célèbre pour ses rives
+isolées, est un refuge pour les oiseaux migrateurs, notamment les flamants
+roses. Ses eaux, d’une pureté incroyable, invitent à la contemplation, tandis
+que les couchers de soleil sur ses rives dévoilent une palette de couleurs
+inoubliables.
               </li>
-              <li>
+              <li style={{background:"#fff",padding:16,borderRadius:12,boxShadow:"0 6px 18px rgba(0,0,0,0.08)",marginBottom:16}}>
                 <strong>23 juillet 2026 — Montagnes de Karakhorum → Oulan-Bator</strong><br/>
-                Visite de Karakhorum et du monastère Erdene Zuu. Arrivée tardive à Oulan-Bator.
+                Nous poursuivrons notre route vers Karakhorum, ancienne capitale de
+l’Empire mongol sous Gengis Khan, entourée de montagnes verdoyantes.
+Nous visiterons l’impressionnant monastère Erdene Zuu, première
+construction bouddhiste du pays, et explorerons les vestiges historiques de
+la ville. Arrivée tardive à Oulan-Bator. Nous terminerons notre périple dans la
+capitale, Oulan-Bator, un contraste saisissant avec les grands espaces que
+nous aurons traversés. Vous découvrirez une ville où modernité et traditions
+coexistent harmonieusement, avec ses monastères, ses marchés animés, et
+ses spectacles de chants et danses traditionnels qui clôtureront notre
+voyage.
               </li>
-              <li>
+              <div style={{position:"relative",width:"100%",maxWidth:800,aspectRatio:"16/9",margin:"12px auto 24px",borderRadius:14,overflow:"hidden",boxShadow:"0 10px 30px rgba(0,0,0,0.12)"}}>
+                <Image src="/mongolie/532339895_1099641311692472_5834519333876072807_n.jpg" alt="Erdene Zuu" fill sizes="(max-width: 768px) 100vw, 800px" quality={85} style={{objectFit:"cover"}} />
+              </div>
+              <li style={{background:"#fff",padding:16,borderRadius:12,boxShadow:"0 6px 18px rgba(0,0,0,0.08)",marginBottom:16}}>
                 <strong>24 juillet 2026 — Visite d’Oulan-Bator</strong><br/>
-                Monastère Gandan, marché local, dîner d’adieu sous la yourte. Nuit en yourte au campement.
+                La journée débute par une visite de la capitale mongole, où l’on découvre
+son riche patrimoine culturel. Vous aurez la possibilité de visiter le monastère
+Gandan, ainsi que le marché local animé, parfait pour un dernier aperçu de
+l’artisanat local. Un dîner d’adieu sous la yourte marquera la fin de cette
+aventure spirituelle, avant de passer une dernière nuit en yourte dans le
+campement.
               </li>
-              <li>
+              <li style={{background:"#fff",padding:16,borderRadius:12,boxShadow:"0 6px 18px rgba(0,0,0,0.08)",marginBottom:16}}>
                 <strong>25 juillet 2026 — Retour en France</strong><br/>
-                Vol de retour. Une immersion authentique au cœur des traditions mongoles.
+                Après ce voyage profondément enrichissant en compagnie des chamanes
+de l’Altaï, nous embarquons pour notre vol de retour en France. Le
+programme a été conçu pour offrir une authenticité inégalée, garantissant
+une immersion totale dans les traditions mongoles.
               </li>
             </ul>
           </details>
@@ -195,39 +288,8 @@ export default function AltaiDetailPage() {
               </li>
             </ul>
           </details>
-          <details>
-            <summary><strong>Le prix ne comprend pas</strong></summary>
-            <ul className="list">
-              <li>Assurances multirisques</li>
-              <li>Boissons autres que thé, café, lait</li>
-              <li>Pourboires et dépenses personnelles</li>
-              <li>Massage proposé par les chamanes mongols (30 € / 1h)</li>
-            </ul>
-          </details>
         </div>
       </section>
-
-      {/* Galerie */}
-      <section className="section">
-        <div className="container flow">
-          <h2>Ambiances du voyage</h2>
-          <div style={{display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center"}}>
-            {photos.map((file, i) => (
-              <div key={`altai-detail-${file}`} style={{position: "relative", width: 220, height: 150, borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.08)"}}>
-                <Image
-                  src={`/mongolie/${file}`}
-                  alt={`Altaï ${i + 1}`}
-                  fill
-                  style={{objectFit: "cover"}}
-                  sizes="(max-width: 600px) 45vw, 220px"
-                  priority={i < 2}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="section">
         <div className="container cta-banner">

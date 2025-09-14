@@ -7,13 +7,43 @@ function getBoolean(value: string | undefined) {
 
 export async function POST(request: Request) {
   try {
+    // ==================== CODE DE DÉBOGAGE TEMPORAIRE ====================
+    // Ce bloc sera retiré une fois le problème résolu.
+    const debugInfo = {
+      message: "Résultat du débogage des variables d'environnement.",
+      details: "Vérifiez la présence (true/false) de chaque variable.",
+      NODE_ENV: process.env.NODE_ENV,
+      variables: {
+        SMTP_HOST: {
+          defined: !!process.env.SMTP_HOST,
+        },
+        SMTP_USER: {
+          defined: !!process.env.SMTP_USER,
+        },
+        SMTP_PASS: {
+          defined: !!process.env.SMTP_PASS,
+        },
+        SMTP_FROM: {
+          defined: !!process.env.SMTP_FROM,
+        },
+        SMTP_TO: {
+          defined: !!process.env.SMTP_TO,
+        },
+      }
+    };
+
+    if (process.env.NODE_ENV === 'production') {
+      return Response.json(debugInfo, { status: 500 });
+    }
+    // ================= FIN DU CODE DE DÉBOGAGE TEMPORAIRE =================
+
     const { fullName, email, subject, message } = await request.json();
 
     if (!fullName || !email || !message) {
       return Response.json({ error: 'Champs manquants.' }, { status: 400 });
     }
 
-    const DEFAULT_TO = 'esteban.h0207@gmail.com';
+    const DEFAULT_TO = 'loreia.bionature@yahoo.fr';
     const smtpHost = process.env.SMTP_HOST;
     const smtpPort = Number(process.env.SMTP_PORT || 587);
     const smtpUser = process.env.SMTP_USER;
@@ -22,18 +52,26 @@ export async function POST(request: Request) {
     const smtpTo = process.env.SMTP_TO || DEFAULT_TO;
     const smtpSecure = getBoolean(process.env.SMTP_SECURE) || smtpPort === 465;
 
-    // Nodemailer only. If SMTP not configured, use Ethereal test account (dev only)
+    // Nodemailer only. If SMTP not configured, use Ethereal test account in dev; error in prod
     let usingTestAccount = false;
     let transporter: nodemailer.Transporter;
     if (!smtpHost || !smtpUser || !smtpPass) {
-      usingTestAccount = true;
-      const testAccount = await nodemailer.createTestAccount();
-      transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        secure: false,
-        auth: { user: testAccount.user, pass: testAccount.pass },
-      });
+      if (process.env.NODE_ENV === 'development') {
+        usingTestAccount = true;
+        const testAccount = await nodemailer.createTestAccount();
+        transporter = nodemailer.createTransport({
+          host: 'smtp.ethereal.email',
+          port: 587,
+          secure: false,
+          auth: { user: testAccount.user, pass: testAccount.pass },
+        });
+      } else {
+        return Response.json({
+          error: 'SMTP non configuré en production',
+          details: 'Définissez SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM.',
+          transport: 'smtp'
+        }, { status: 500 });
+      }
     } else {
       transporter = nodemailer.createTransport({
         host: smtpHost,
@@ -43,56 +81,59 @@ export async function POST(request: Request) {
       });
     }
 
+    // Vérifie la configuration SMTP avant l'envoi
+    try {
+      await transporter.verify();
+    } catch (verifyError: any) {
+      return Response.json({
+        error: 'SMTP vérification échouée',
+        details: verifyError?.message || 'Impossible de se connecter au serveur SMTP',
+        transport: 'smtp'
+      }, { status: 500 });
+    }
+
     const mailSubject = subject && String(subject).trim().length > 0
       ? `[Contact] ${subject}`
       : '[Contact] Nouveau message du site';
 
     const text = `Nom: ${fullName}\nEmail: ${email}\n\nMessage:\n${message}`;
 
-    // Prefer Brevo if API key provided
-    const brevoApiKey = process.env.BREVO_API_KEY;
-    const useBrevo = Boolean(brevoApiKey && brevoApiKey.trim().length > 0);
+    // Envoi via Nodemailer/SMTP uniquement
+    const allowUserFrom = getBoolean(process.env.SMTP_ALLOW_FROM_USER);
+    const mailFrom = allowUserFrom && email ? email : (smtpFrom || 'no-reply@example.com');
 
-    if (useBrevo) {
-      const senderEmail = smtpFrom || 'esteban.h0207@gmail.com';
-      const payload = {
-        sender: { email: senderEmail, name: 'Site Lore Heya' },
-        to: [{ email: smtpTo }],
-        replyTo: { email },
-        subject: mailSubject,
-        textContent: text,
-      };
-      const res = await fetch('https://api.brevo.com/v3/smtp/email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'api-key': brevoApiKey as string,
-        },
-        body: JSON.stringify(payload),
-        cache: 'no-store',
-      });
-      if (!res.ok) {
-        const errText = await res.text();
-        return Response.json({ error: 'Brevo error', details: errText }, { status: 502 });
-      }
-      const result = await res.json();
-      return Response.json({ ok: true, id: result?.messageId || 'brevo' });
-    } else {
-      // Compose email via Nodemailer
-      const allowUserFrom = getBoolean(process.env.SMTP_ALLOW_FROM_USER);
-      const mailFrom = allowUserFrom && email ? email : (smtpFrom || 'no-reply@example.com');
-
-      const info = await transporter.sendMail({
-        from: mailFrom,
-        to: smtpTo,
-        replyTo: email,
-        subject: mailSubject,
-        text,
-      });
-      const previewUrl = usingTestAccount ? nodemailer.getTestMessageUrl(info) : undefined;
-      return Response.json({ ok: true, id: info.messageId, previewUrl });
-    }
-  } catch (error) {
-    return Response.json({ error: 'Erreur serveur.' }, { status: 500 });
+    const info = await transporter.sendMail({
+      from: mailFrom,
+      to: smtpTo,
+      replyTo: email,
+      subject: mailSubject,
+      text,
+      html: `<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#111;">
+        <h2 style="margin:0 0 12px;">Nouveau message du formulaire de contact</h2>
+        <p style="margin:0 0 8px;"><strong>Nom:</strong> ${fullName}</p>
+        <p style="margin:0 0 8px;"><strong>Email:</strong> ${email}</p>
+        <hr style="border:none;border-top:1px solid #eee;margin:12px 0;" />
+        <p style="white-space:pre-wrap;margin:0;">${message}</p>
+      </div>`,
+    });
+    const previewUrl = usingTestAccount ? nodemailer.getTestMessageUrl(info) : undefined;
+    return Response.json({
+      ok: true,
+      id: info.messageId,
+      previewUrl,
+      transport: usingTestAccount ? 'ethereal' : 'smtp',
+      mailFrom,
+      mailTo: smtpTo,
+      accepted: info.accepted,
+      rejected: info.rejected,
+      envelope: info.envelope,
+      response: info.response,
+    });
+  } catch (error: any) {
+    return Response.json({
+      error: 'Erreur serveur.',
+      details: error?.message || 'Erreur inconnue',
+      transport: 'smtp'
+    }, { status: 500 });
   }
 }
