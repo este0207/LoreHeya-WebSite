@@ -7,36 +7,6 @@ function getBoolean(value: string | undefined) {
 
 export async function POST(request: Request) {
   try {
-    // ==================== CODE DE DÉBOGAGE TEMPORAIRE ====================
-    // Ce bloc sera retiré une fois le problème résolu.
-    const debugInfo = {
-      message: "Résultat du débogage des variables d'environnement.",
-      details: "Vérifiez la présence (true/false) de chaque variable.",
-      NODE_ENV: process.env.NODE_ENV,
-      variables: {
-        SMTP_HOST: {
-          defined: !!process.env.SMTP_HOST,
-        },
-        SMTP_USER: {
-          defined: !!process.env.SMTP_USER,
-        },
-        SMTP_PASS: {
-          defined: !!process.env.SMTP_PASS,
-        },
-        SMTP_FROM: {
-          defined: !!process.env.SMTP_FROM,
-        },
-        SMTP_TO: {
-          defined: !!process.env.SMTP_TO,
-        },
-      }
-    };
-
-    if (process.env.NODE_ENV === 'production') {
-      return Response.json(debugInfo, { status: 500 });
-    }
-    // ================= FIN DU CODE DE DÉBOGAGE TEMPORAIRE =================
-
     const { fullName, email, subject, message } = await request.json();
 
     if (!fullName || !email || !message) {
