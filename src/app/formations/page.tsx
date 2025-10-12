@@ -14,15 +14,15 @@ export default function FormationsPage() {
         <div className="container" style={{ textAlign: 'center' }}>
           <h1 style={{ margin: 0 }}>Formations en chamanisme</h1>
           <p style={{ margin: '8px 0 0' }}>
-            Des parcours structurés pour apprendre, pratiquer et intégrer le chamanisme dans votre vie
-            ou votre accompagnement professionnel. En présence et à distance.
+            Ces formations vous sont proposées en visioconférence en direct par petits groupes avec un accompagnement individuel a raison de 2h par semaine.
+            Chacun est libre de choisir la formule en visioconférence ou les stages en fonction de ses disponibilités.
           </p>
           <div className="soins-hero-actions" style={{ justifyContent: 'center', marginTop: 12 }}>
             <a href="/contact" className="btn btn-primary">Demander le programme</a>
             <Link href="/stages" className="btn btn-ghost">Voir les stages</Link>
           </div>
           <div className="badges" style={{ marginTop: 10 }}>
-            <span className="pill">Présentiel</span>
+            <span className="pill">Visio en direct</span>
             <span className="pill">Distanciel</span>
             <span className="pill">Débutant à avancé</span>
           </div>
@@ -188,10 +188,14 @@ export default function FormationsPage() {
             <li>Création de talisman chargé pour la protection</li>
             <li>Remise de diplômes</li>
           </ul>
+          <p><strong>Sur 9 mois, 95 euros par mois</strong></p>
+          <p><strong>Certificat de praticien en chamanisme</strong></p>
+
 
           <hr />
 
           <h2 id="programme-vert">Programme Chamanisme Vert</h2>
+          <p>Module facultatif, prérecquis : Avoir suivi le Chamanisme Blanc</p>
           <h3>Module 1</h3>
           <ul className="list">
             <li>Introduction au chamanisme vert : élément, élémentaire, elemental</li>
@@ -226,6 +230,7 @@ export default function FormationsPage() {
           <hr />
 
           <h2 id="programme-avance">Programme Chamanisme Avancé</h2>
+          <p>Module facultatif, prérecquis : Avoir suivi le Chamanisme Blanc & Vert</p>
           <h3>Module 1</h3>
           <ul className="list">
             <li>Diagnostique de dégagement des lieux</li>
@@ -287,7 +292,7 @@ export default function FormationsPage() {
           <div className="faq" style={{ marginTop: 8 }}>
             <details>
               <summary>Initiation – prochain cycle</summary>
-              <p>Nouvelle session tous les 6 mois. Places limitées.</p>
+              <p>Nouvelle session Janvier 2026</p>
             </details>
           </div>
         </div>
