@@ -84,6 +84,26 @@ export default function StagesPage() {
                   Ce stage sera très demandé, réservez votre place dès maintenant.
                 </p>
               </div>
+
+              <h2 id="stage-chamanisme-blanc" style={{ textAlign: 'left', marginBottom: '3rem' , marginTop: '3rem'}}>CHAMANISME BLANC 1er NIVEAU</h2>
+              <p>
+                <strong>LES 14 et 15 Mars 2026</strong><br/>
+                <em>Prévoir un logement</em>
+              </p>
+              <ul className="list">
+                <li>Introduction Qu'est-ce que le chamanisme, un chaman, les protections pour faire un voyage chamanique</li>
+                <li>Les 3 mondes invisibles, initiation au voyage chamanique, rencontre avec son animal de pouvoir</li>
+                <li>Le tambour, outils de pouvoir du chaman, utilisation, comment le choisir</li>
+                <li>Monde du Bas Connaître ses Plantes de pouvoir, utilisation, conservation</li>
+                <li>Connaître ses Pierres de pouvoir</li>
+                <li>Connaître son Arbre de Pouvoir</li>
+                <li>Animal Gardien et Chaman intérieur</li>
+                <li>Faire des Offrandes aux esprits de la nature, renforcer ses énergies et son intuition, sa vision</li>
+              </ul>
+              <p>
+                Ouvert à tous, tarif: <strong>240 euros</strong>, apporter son repas.
+              </p>
+              <p><strong>Autres dates a venir début 2026...</strong></p>
             </div>
             
             <div>
