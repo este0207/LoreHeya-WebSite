@@ -92,7 +92,7 @@ export default function NavBar() {
               className={`nav-link ${pathname === '/soins' ? 'active' : ''}`}
               onClick={closeMenu}
             >
-              SOINS
+              GUIDANCES
             </Link>
           </li>
           <li>

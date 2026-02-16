@@ -10,17 +10,16 @@ export default function SoinsPage() {
       <NavBar2></NavBar2>
       {/* Hero */}
       <section className="soins-hero">
-        <h1>Soins chamaniques & énergétiques</h1>
+        <h1>Guidance chamaniques & énergétiques</h1>
         <p>
           Des accompagnements pour réharmoniser le corps et l'esprit, libérer les blocages
-          et retrouver un ancrage profond. Séances en cabinet ou à distance.
+          et retrouver un ancrage profond.
         </p>
         <div className="soins-hero-actions">
           <a href="/contact" className="btn btn-primary">Prendre rendez-vous</a>
           <Link href="/faq" className="btn btn-ghost">Questions fréquentes</Link>
         </div>
         <div className="badges">
-          <span className="pill">En cabinet</span>
           <span className="pill">À distance</span>
           <span className="pill">Adultes & ados</span>
         </div>
@@ -38,21 +37,6 @@ export default function SoinsPage() {
               isDark={true}
               backgroundImage="/bg2.jpg"
             />
-            <Card
-              title="Soin Chamanique en Présence"
-              description="Travail en profondeur avec le souffle, les éléments et le tambour. Un espace sacré pour transformer ce qui doit l’être."
-              buttonText="Réserver"
-              buttonLink="/contact"
-              isDark={false}
-            />
-            <Card
-              title="Soin Chamanique a Distance"
-              description="Un accompagnement puissant sans déplacement, pour relâcher les charges émotionnelles et favoriser l’auto-guérison."
-              buttonText="Réserver"
-              buttonLink="/contact"
-              isDark={true}
-              backgroundImage="/bg5.jpg"
-            />
           </div>
         </div>
       </section>
@@ -66,7 +50,7 @@ export default function SoinsPage() {
               <strong>Échange</strong> — nous posons l’intention et vos besoins du moment.
             </li>
             <li>
-              <strong>Soin</strong> — travail énergétique/chamanique (respiration, tambour, imposition légère, sons).
+              <strong>Guidance</strong> — travail énergétique/chamanique (respiration, tambour, imposition légère, sons).
             </li>
             <li>
               <strong>Intégration</strong> — temps d’accueil, hydratation, recommandations personnalisées.
@@ -84,16 +68,8 @@ export default function SoinsPage() {
           <h2>Tarifs & durée</h2>
           <div className="price-grid">
             <div className="price-card">
-              <h3>Guidance des oracles a Distance</h3>
+              <h3>Guidance de mes guides</h3>
               <p className="price">70€ · 1h30</p>
-            </div>
-            <div className="price-card">
-              <h3>Soin Chamanique a Distance</h3>
-              <p className="price">100€ · 1h</p>
-            </div>
-            <div className="price-card">
-              <h3>Soin Chamanique en Présence</h3>
-              <p className="price">120€ · 1h</p>
             </div>
           </div>
         </div>
@@ -102,14 +78,6 @@ export default function SoinsPage() {
       {/* Recommandations & contre-indications */}
       <section className="section">
         <div className="container grid-2">
-          <div>
-            <h2>Avant / après la séance</h2>
-            <ul className="list">
-              <li>Venez si possible avec des vêtements confortables.</li>
-              <li>Hydratez-vous bien le jour J et le lendemain.</li>
-              <li>Prévoyez un temps calme après la séance pour intégrer.</li>
-            </ul>
-          </div>
           <div>
             <h2>Contre-indications</h2>
             <ul className="list">
