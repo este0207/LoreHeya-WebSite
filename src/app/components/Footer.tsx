@@ -17,7 +17,7 @@ export default function Footer() {
           <ul className="footer-links">
             <li><Link href="/formations">Formations</Link></li>
             <li><Link href="/stages">Stages</Link></li>
-            <li><Link href="/soins">Soins</Link></li>
+            <li><Link href="/soins">Guidances</Link></li>
             <li><Link href="/faq">FAQ</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
