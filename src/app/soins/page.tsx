@@ -30,8 +30,8 @@ export default function SoinsPage() {
         <div className="container">
           <div className="CardContainer">
             <Card
-              title="Guidance des oracles a Distance"
-              description="Rééquilibrage des centres énergétiques, libération des tensions et apaisement du système nerveux. Idéal pour retrouver vitalité et clarté."
+              title="Guidance des oracles à Distance"
+              description="Guidance de mes guides sur une ou plusieurs problématiques que vous rencontrez. Je m'entretiens avec mes guides, reçois vos messages puis vous envoie le compte rendu ecrit."
               buttonText="Réserver"
               buttonLink="/contact"
               isDark={true}
@@ -50,7 +50,7 @@ export default function SoinsPage() {
               <strong>Échange</strong> — nous posons l’intention et vos besoins du moment.
             </li>
             <li>
-              <strong>Guidance</strong> — travail énergétique/chamanique (respiration, tambour, imposition légère, sons).
+              <strong>Guidance</strong> — réception de messages de mes guides, interprétation et retranscription écrite.
             </li>
             <li>
               <strong>Intégration</strong> — temps d’accueil, hydratation, recommandations personnalisées.
