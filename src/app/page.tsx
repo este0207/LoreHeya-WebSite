@@ -48,11 +48,16 @@ export default function Page() {
 
           C'est ainsi qu a commencé mon enseignement, en France et en Mongolie vers un chemin qu il me semble n avoir jamais quitté. 
 
-          Aujourd'hui je suis dévouée aux autres afin de transmettre toutes ces connaissances de mes Maîtres Chamans en faisant le pont entre le pays berceau du chamanisme et la France qui a perdu ses traditions. 
+          À travers mon enseignement, mon rôle est de transmettre et d'intégrer en chacun de nous la sagesse ancestrale des peuples autochtones, en créant un pont entre leurs valeurs profondes et notre monde moderne qui s'en est progressivement éloigné.
 
-          Je propose des formations a distance et en présence pour ceux qui sont désignés Chamans mais aussi a tous ceux qui souhaitent devenir praticien en chamanisme et/ou se guérir de leurs propres blessures,
-          Des soins, des guidances, et des voyages vers la Mongolie afin de rencontrer des Chamans traditionnels. `}</p>
-        </div>
+          Depuis des millénaires, ces traditions portent une compréhension subtile de l'être humain, de la nature et des lois invisibles qui régissent la vie. Elles nous rappellent l'importance de l'équilibre, du respect du vivant, de l'écoute de l'intuition et de la responsabilité individuelle dans notre évolution.
+
+          En m'appuyant sur les enseignements du chamanisme sibérien et mongol reçus auprès de différents maîtres chamans, je propose des outils concrets permettant à chacun de se reconnecter à son essence, de guérir ses blessures intérieures et de retrouver sa souveraineté énergétique.
+
+          Mon approche ne vise pas à former des chamans, mais à rendre ces connaissances accessibles afin que chacun puisse devenir acteur de sa propre transformation et avancer vers une vie plus consciente, alignée et harmonieuse.
+          
+          Mon travail consiste ainsi à réintroduire dans notre société moderne les valeurs fondamentales de sagesse, d'équilibre et de respect du vivant, afin de participer à l'émergence d'un monde plus juste, plus conscient et profondément relié à la nature.`}</p>
+          </div>
       </section>
       <div className="home-card-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 40, margin: '40px 0' }}>
         <Card
