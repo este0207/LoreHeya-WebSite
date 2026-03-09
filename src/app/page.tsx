@@ -48,7 +48,7 @@ export default function Page() {
 
           C'est ainsi qu a commencé mon enseignement, en France et en Mongolie vers un chemin qu il me semble n avoir jamais quitté. 
 
-          À travers mon enseignement, mon rôle est de transmettre et d'intégrer en chacun de nous la sagesse ancestrale des peuples autochtones, en créant un pont entre leurs valeurs profondes et notre monde moderne qui s'en est progressivement éloigné.
+          Aujourd’hui, à travers mon enseignement, mon rôle est de transmettre et d'intégrer en chacun de nous la sagesse ancestrale des peuples autochtones, en créant un pont entre leurs valeurs profondes et notre monde moderne qui s'en est progressivement éloigné.
 
           Depuis des millénaires, ces traditions portent une compréhension subtile de l'être humain, de la nature et des lois invisibles qui régissent la vie. Elles nous rappellent l'importance de l'équilibre, du respect du vivant, de l'écoute de l'intuition et de la responsabilité individuelle dans notre évolution.
 
