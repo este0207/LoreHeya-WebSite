@@ -71,8 +71,8 @@ export default function Page() {
           backgroundPosition="center 30%"
         />
         <Card
-          title="Plateforme de formation"
-          description="Rééquilibrage, libération, ancrage."
+          title="Formations"
+          description="Devenez praticien.ne en chanmanisme."
           buttonText="Accéder a la plateform"
           buttonLink="https://ecoledechamanisme.teachizy.fr/?fbclid=IwY2xjawMhSCdleHRuA2FlbQIxMQABHlWoY6FFy1X422fKeZ0IHsXekwJeUbHhxtWzfDTNjrf_AU2jrEYgIKeEsvrU_aem_8rnFE32QyzZcQ9ahw2S5cQ"
           isDark
@@ -80,10 +80,10 @@ export default function Page() {
           backgroundImage="/home_cards/plateforme.jpeg"
         />
         <Card
-          title="Formations"
-          description="Devenez praticien·ne, développez vos dons."
-          buttonText="Découvrir les formations"
-          buttonLink="/formations"
+          title="Retraites chamaniques"
+          description="Séjours au cœur de la nature sauvage en Suède."
+          buttonText="Découvrir les Voyages"
+          buttonLink="/retraite"
           isDark={true}
           isCentered
           backgroundImage="/home_cards/formation.jpeg"

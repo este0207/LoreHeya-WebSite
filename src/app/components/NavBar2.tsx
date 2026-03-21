@@ -34,7 +34,7 @@ export default function NavBar2() {
   return (
     <nav aria-label="Navigation principale" className="scrolled">
       <div className="title">
-        <a href="/"><h1>Lore Heya Chamane</h1></a>
+        <Link href="/"><h1>Lore Heya Chamane</h1></Link>
       </div>
 
       <button

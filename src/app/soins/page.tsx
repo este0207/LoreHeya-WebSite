@@ -7,7 +7,7 @@ import NavBar2 from "../components/NavBar2";
 export default function SoinsPage() {
   return (
     <main>
-      <NavBar2></NavBar2>
+      <NavBar2 />
       {/* Hero */}
       <section className="soins-hero">
         <h1>Guidance chamaniques & énergétiques</h1>

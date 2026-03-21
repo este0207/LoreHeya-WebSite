@@ -24,10 +24,11 @@ export default function StagesPage() {
         <div className="container">
           <div className="CardContainer">
             <Card
-              title="Chamanisme Mongol Traditionnel"
-              description="Déplacement exceptionnel en France d'un Chaman Mongol traditionnel. Mooggii, Chaman Blanc de 25 ans d'expérience."
+              title="Chamanisme Traditionnel"
+              description=""
               buttonText="Découvrir les stages"
               buttonLink="#stage-mongol"
+              isDark={true}
               backgroundImage="/chaman.jpg"
             />
           </div>
@@ -39,76 +40,60 @@ export default function StagesPage() {
       {/* Détails du stage chamanisme mongol */}
       <section className="section">
         <div className="container">
-          <h2 id="stage-mongol" style={{ textAlign: 'center', marginBottom: '3rem' }}>Chamanisme Mongol Traditionnel avec Mooggii</h2>
           
           <div className="grid-2" style={{ alignItems: 'flex-start', gap: '3rem' }}>
             <div className="flow" style={{ position: 'sticky', top: '2rem' }}>
-              <p>
-                <strong>Déplacement exceptionnel en France d'un Chaman Mongol traditionnel</strong><br/>
-                Mooggii, Chaman Blanc de 25 ans d'expérience, faisant partie de l'association « Maison de lumière » garantissant son travail, 
-                sera accompagné de Chimegma, traductrice Franco-Mongole et directrice de l'agence de voyage en Mongolie Orsoo Voyages et de Lore Heya Chamane.
-              </p>
-              
-              <h3>Dates et lieux</h3>
-              <div className="grid-2">
-                <div>
-                  <h4>Week-end du 14/15/16 novembre</h4>
-                  <p><strong>Montauroux (83)</strong></p>
-                </div>
-                <div>
-                  <h4>Week-end du 21/22/23 novembre</h4>
-                  <p><strong>Saint-Vallier-de-Thiey (06)</strong></p>
-                </div>
-              </div>
-
-              <h3>Au programme</h3>
-              <ul className="list">
-                <li>Enseignement de Chamanisme Mongol traditionnel avec traductrice</li>
-                <li>Cérémonies du feu</li>
-                <li>Incorporation des Oracles (Ancêtres)</li>
-                <li>Repas et petits déjeuners compris</li>
-                <li>Cuisine mongole traditionnelle préparée par une cuisinière</li>
-              </ul>
-
-              <h3>Tarifs et services</h3>
-              <ul className="list">
-                <li><strong>490€</strong> - Stage (repas et petits déjeuners compris)</li>
-                <li><strong>80€</strong> - Consultation privée avec le Chaman</li>
-                <li><strong>80€</strong> - Massage-soin</li>
-                <li><em>Logement à prévoir</em></li>
-              </ul>
-
-              <div className="alert">
-                <p>
-                  <strong>Important :</strong> Ces dates sont conditionnées par l'attribution de son visa en France. 
-                  Ce stage sera très demandé, réservez votre place dès maintenant.
-                </p>
-              </div>
 
               <h2 id="stage-chamanisme-blanc" style={{ textAlign: 'left', marginBottom: '3rem' , marginTop: '3rem'}}>CHAMANISME BLANC 1er NIVEAU</h2>
-              <p>
-                <strong>LES 14 et 15 Mars 2026</strong><br/>
-                <em>Prévoir un logement</em>
+              <div>
+                  <p>
+                  <strong>LES 9 et 10 Mai 2026</strong><br/>
+                  <em>Lieu : Roquebrune-sur-Argens</em>
+                </p>
+                <ul className="list">
+                  <li>Introduction Qu'est-ce que le chamanisme, un chaman, les protections pour faire un voyage chamanique</li>
+                  <li>Les 3 mondes invisibles, initiation au voyage chamanique, rencontre avec son animal de pouvoir</li>
+                  <li>Le tambour, outils de pouvoir du chaman, utilisation, comment le choisir</li>
+                  <li>Monde du Bas Connaître ses Plantes de pouvoir, utilisation, conservation</li>
+                  <li>Connaître ses Pierres de pouvoir</li>
+                  <li>Connaître son Arbre de Pouvoir</li>
+                  <li>Animal Gardien et Chaman intérieur</li>
+                  <li>Faire des Offrandes aux esprits de la nature, renforcer ses énergies et son intuition, sa vision</li>
+                </ul>
+                <p>
+                  Ouvert à tous, tarif: <strong>240 euros</strong>, apporter son repas. <br />
+                  <strong>Prévoir un logement</strong><br />
+                </p>
+                <p><strong>Autres dates a venir...</strong></p>
+              </div>
+
+              <br />
+              <hr />
+              <br />
+
+              <div>
+                <p>
+                <strong>DU 15 AU 18 OCTOBRE</strong><br/>
+                <em>Lieu : Sud de la Suède</em>
               </p>
               <ul className="list">
-                <li>Introduction Qu'est-ce que le chamanisme, un chaman, les protections pour faire un voyage chamanique</li>
-                <li>Les 3 mondes invisibles, initiation au voyage chamanique, rencontre avec son animal de pouvoir</li>
-                <li>Le tambour, outils de pouvoir du chaman, utilisation, comment le choisir</li>
-                <li>Monde du Bas Connaître ses Plantes de pouvoir, utilisation, conservation</li>
-                <li>Connaître ses Pierres de pouvoir</li>
-                <li>Connaître son Arbre de Pouvoir</li>
-                <li>Animal Gardien et Chaman intérieur</li>
-                <li>Faire des Offrandes aux esprits de la nature, renforcer ses énergies et son intuition, sa vision</li>
+                <li>Cérémonies et rituels puissants en pleine nature</li>
+                <li>Connexion profonde avec les esprits de la nature</li>
+                <li>Découverte de la faune et de la flore de la Suède, au cœur de paysages époustouflants</li>
               </ul>
               <p>
-                Ouvert à tous, tarif: <strong>240 euros</strong>, apporter son repas.
+                <strong>Un stage initiatique intense</strong><br/>
+                Un enseignement chamanique profond réservé aux personnes ayant déjà un bon niveau de pratique.
               </p>
-              <p><strong>Autres dates a venir début 2026...</strong></p>
+              <p>
+                Tarif: <strong>490 euros</strong> (hors vol).
+              </p>
+              </div>
             </div>
             
             <div>
               <img 
-                src="/chaman.jpg" 
+                src="/salle3.jpeg" 
                 alt="Mooggii, Chaman Mongol traditionnel" 
                 style={{ 
                   width: '100%', 
@@ -120,7 +105,7 @@ export default function StagesPage() {
                 }} 
               />
               <img 
-                src="/salle1.jpg" 
+                src="/salle4.jpeg" 
                 alt="Salle 1" 
                 style={{ 
                   width: '100%', 
