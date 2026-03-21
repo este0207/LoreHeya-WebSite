@@ -42,11 +42,11 @@ export default function Page() {
       <section className="section">
         <div className="container home-story">
           <h2>Mon parcours</h2>
-          <p className="home-story-content">{`Enfant je voyais l avenir, les défunts, ressentais les blessures des autres... sans comprendre qui j etais ni quoi faire de ces capacités. 
+          <p className="home-story-content">{`Enfant je voyais l'avenir, les défunts, ressentais les blessures des autres... sans comprendre qui j'etais ni quoi faire de ces capacités. 
 
-          Ce n'est que des annes plus tard que tout est devenu clair lorsque 4 chamans traditionnels m ont reconnu comme "chamane de naissance" m expliquant que certains ancetres chamans marquent un de leur descendant comme leur successeur.  Celui ci devra suivre une longue formation afin de perpétuer les traditions ancestrales. 
+          Ce n'est que des années plus tard que tout est devenu clair lorsque 4 chamans traditionnels m ont reconnu comme "chamane de naissance" m'expliquant que certains ancetres chamans marquent un de leur descendant comme leur successeur.  Celui ci devra suivre une longue formation afin de perpétuer les traditions ancestrales. 
 
-          C'est ainsi qu a commencé mon enseignement, en France et en Mongolie vers un chemin qu il me semble n avoir jamais quitté. 
+          C'est ainsi qu'a commencé mon enseignement, en France et en Mongolie vers un chemin qu'il me semble n'avoir jamais quitté. 
 
           Aujourd’hui, à travers mon enseignement, mon rôle est de transmettre et d'intégrer en chacun de nous la sagesse ancestrale des peuples autochtones, en créant un pont entre leurs valeurs profondes et notre monde moderne qui s'en est progressivement éloigné.
 
@@ -72,7 +72,7 @@ export default function Page() {
         />
         <Card
           title="Formations"
-          description="Devenez praticien.ne en chanmanisme."
+          description="Devenez praticien.ne en chamanisme."
           buttonText="Accéder a la plateform"
           buttonLink="https://ecoledechamanisme.teachizy.fr/?fbclid=IwY2xjawMhSCdleHRuA2FlbQIxMQABHlWoY6FFy1X422fKeZ0IHsXekwJeUbHhxtWzfDTNjrf_AU2jrEYgIKeEsvrU_aem_8rnFE32QyzZcQ9ahw2S5cQ"
           isDark
