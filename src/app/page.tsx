@@ -73,7 +73,7 @@ export default function Page() {
         <Card
           title="Formations"
           description="Devenez praticien.ne en chamanisme."
-          buttonText="Accéder a la plateform"
+          buttonText="Accéder a la plateforme"
           buttonLink="https://ecoledechamanisme.teachizy.fr/?fbclid=IwY2xjawMhSCdleHRuA2FlbQIxMQABHlWoY6FFy1X422fKeZ0IHsXekwJeUbHhxtWzfDTNjrf_AU2jrEYgIKeEsvrU_aem_8rnFE32QyzZcQ9ahw2S5cQ"
           isDark
           isCentered
