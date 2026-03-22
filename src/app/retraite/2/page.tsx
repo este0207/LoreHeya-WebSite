@@ -10,9 +10,9 @@ export default function RetraiteDetailPage2() {
 
       {/* Hero */}
       <section className="soins-hero" style={{ marginTop: 40 }}>
-        <h1>Retraite dans le sud de la Suède</h1>
+        <h1>Retraite en Laponie</h1>
         <p>
-          Retraite chamanique pour le solstice dans le Sud de la Suède
+            Retraite en Laponie Suedoise pour le nouvel an
         </p>
         <div className="soins-hero-actions">
           <a href="#programme" className="btn btn-primary">Voir le programme</a>

@@ -2,6 +2,7 @@ import NavBar2 from "../components/NavBar2"
 import Link from "next/link";
 import Card from "../components/Card";
 
+
 export default function Retraite() {
   return (
     <main>
@@ -31,7 +32,7 @@ export default function Retraite() {
               buttonText="Plus d'infos"
               buttonLink="#testBtn"
               isDark={true}
-              backgroundImage="/bg2.jpg"
+              backgroundImage="/bg5.jpg"
             />
             <Card
               title="Retraite en Laponie"
@@ -39,15 +40,15 @@ export default function Retraite() {
               buttonText="Plus d'infos"
               buttonLink="/retraite/2"
               isDark={false}
-              backgroundImage="/bg2.jpg"
+              backgroundImage="/bg5.jpg"
             />
           </div>
         </div>
       </section>
       <section className="section" id="testBtn">
         <div className="container">
-            <div className="grid-2" style={{ alignItems: 'flex-start', gap: '3rem' }}>
-            <div className="flow" style={{ position: 'sticky', top: '2rem' }}>
+            <div className="grid-2 sm:grid-1" style={{ alignItems: 'flex-start', gap: '3rem' }}>
+            <div className="flow">
                 {/*
                 Premier voyage : séjour au cœur de la nature sauvage en Suède
                 */}
