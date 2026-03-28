@@ -53,7 +53,7 @@ export default function Retraite() {
                 Premier voyage : séjour au cœur de la nature sauvage en Suède
                 */}
                 <h2>
-                  <strong>Séjour au cœur de la nature sauvage en Suède</strong><br/>
+                  <strong>Retraite au cœur de la nature sauvage en Suède</strong><br/>
                   5 jours / 4 nuits – Du 7 au 11 octobre 2026
                 </h2>
                 
