@@ -72,22 +72,34 @@ export default function StagesPage() {
               <br />
 
               <div>
-                <p>
-                <strong>DU 15 AU 18 OCTOBRE</strong><br/>
-                <em>Lieu : Sud de la Suède</em>
-              </p>
-              <ul className="list">
-                <li>Cérémonies et rituels puissants en pleine nature</li>
-                <li>Connexion profonde avec les esprits de la nature</li>
-                <li>Découverte de la faune et de la flore de la Suède, au cœur de paysages époustouflants</li>
-              </ul>
-              <p>
-                <strong>Un stage initiatique intense</strong><br/>
-                Un enseignement chamanique profond réservé aux personnes ayant déjà un bon niveau de pratique.
-              </p>
-              <p>
-                Tarif: <strong>490 euros</strong> (hors vol).
-              </p>
+                <h2 id="stage-suede" style={{ textAlign: 'left', marginBottom: '3rem', marginTop: '3rem' }}>STAGE EN SUÈDE - DU 7 AU 11 OCTOBRE 2026</h2>
+                <div>
+                  <p>
+                    <strong>DU 7 AU 11 OCTOBRE 2026</strong><br/>
+                    <em>Lieu : Sud de la Suède</em>
+                  </p>
+                  <p>
+                    Au cœur du sud de la Suède, dans une nature préservée et profondément ressourçante, venez nous rejoindre lors de cérémonies sacrées autour du feu.
+                    Une expérience unique pour ralentir, vous reconnecter à vous-même et aux forces de la nature.
+                  </p>
+                  <p>
+                    <strong>Programme:</strong>
+                  </p>
+                  <ul className="list">
+                    <li><strong>Jour 1 (7 oct):</strong> Arrivée, installation en forêt, dîner traditionnel suédois, cérémonie d'ouverture autour du feu</li>
+                    <li><strong>Jour 2 (8 oct):</strong> Accueil du soleil avec offrandes, balade en nature, enseignements sur la connexion avec ses guides, cérémonie de serment</li>
+                    <li><strong>Jour 3 (9 oct):</strong> Randonnée autour des lacs, enseignements sur les protections et le positionnement de guérisseur, cérémonie de transmutation</li>
+                    <li><strong>Jour 4 (10 oct):</strong> Temps libre à Göteborg, déjeuner typique suédois, cérémonie de clôture</li>
+                    <li><strong>Jour 5 (11 oct):</strong> Groupe de parole, retour à l'aéroport</li>
+                  </ul>
+                  <p>
+                    Aurores boréales possibles selon la météo. Ce stage rappelle les conditions de rituels en Mongolie.
+                  </p>
+                  <p>
+                    <strong>Tarif: 1050 euros</strong> (hors vol)<br/>
+                    Compris: Logement en chambres partagées, repas, transport aéroport, cérémonies, enseignements, consultations avec les oracles
+                  </p>
+                </div>
               </div>
             </div>
             
