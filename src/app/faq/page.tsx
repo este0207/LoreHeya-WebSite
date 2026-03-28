@@ -38,7 +38,7 @@ const DEFAULT_FAQ: FaqItem[] = [
   {
     id: 'Mongolie',
     question: `Comment être sûr d'avoir affaire à un Chaman sérieux en Mongolie ou en France? `,
-    answer: `Même en Mongolie il peut y avoir du Chamanisme de tourisme, pour y échapper voici des conditions cumulatives:\nIl a été reconnu Chaman par plusieurs Chamans traditionnels,\nIl a reçu un enseignement de chamanisme ancestral pendant plusieurs années,\nIl connaît des Chamans traditionnels,\nSa tenue est unique et personnelle,\nIl fait partie de l'association "Maison de lumière" en Mongolie (ou son Maître en fait partie),\nC'est un Chaman blanc,\nJe paie ma consultation,`,
+    answer: `Même en Mongolie il peut y avoir du Chamanisme de tourisme, pour y échapper voici des conditions cumulatives:\nIl a été reconnu Chaman par plusieurs Chamans traditionnels,\nIl a reçu un enseignement de chamanisme ancestral pendant plusieurs années,\nIl connaît des Chamans traditionnels,\nSa tenue est unique et personnelle,\nC'est un Chaman blanc,\nJe paie ma consultation,`,
   },
   {
     id: 'incorporation',
@@ -48,7 +48,7 @@ const DEFAULT_FAQ: FaqItem[] = [
   {
     id: 'fausses-formations',
     question: `Est-ce qu'il existe de fausses formations, fausses transes... faux voyages initiatiques?`,
-    answer: `Totalement, servez vous des conseils plus haut afin de les repérer.\nCe qui est très important c'est de demander au Chaman par qui a t-il été formé et reconnu.\nS'il n'est ni reconnu ni formé par un Chaman traditionnel il s'est simplement proclamé Chaman lui-même.\nL'association "maison de lumière" est un gage de garantie également car elle ressence tous les vrais Chamans de Mongolie en se préservant des pratiques pour les touristes.`,
+    answer: `Totalement, servez vous des conseils plus haut afin de les repérer.\nCe qui est très important c'est de demander au Chaman par qui a t-il été formé et reconnu.\nS'il n'est ni reconnu ni formé par un Chaman traditionnel il s'est simplement proclamé Chaman lui-même.`,
   },
   {
     id: 'type-chamanisme',
