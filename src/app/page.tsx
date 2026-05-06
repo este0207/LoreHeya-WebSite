@@ -40,7 +40,19 @@ export default function Page() {
     <main>
       <Header></Header>
       <section className="section">
+          <div className="book-banner" style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: '#f5f0e8', padding: '16px', borderRadius: 8, marginBottom: 20, backgroundColor: '#ffffff', margin: '0 40px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
+              <img src="/livre.jpg" alt="Couverture du livre" style={{width: 96, height: 'auto', borderRadius: 6, objectFit: 'cover'}} />
+              <div style={{display: 'flex', flexDirection: 'column'}}>
+                <strong style={{fontSize: 18, color: '#1a4314'}}>Lire Mon Histoire</strong>
+                <span style={{fontSize: 14, color: '#1a4314'}}>Mon livre disponible sur Amazon</span>
+              </div>
+            </div>
+            <a href="https://www.amazon.fr/dp/B0GZFSF16W" target="_blank" rel="noopener noreferrer" style={{background: '#ffffff', color: '#28691E', padding: '10px 16px', borderRadius: 6, textDecoration: 'none' , border: '1px solid #28691E'}}>Voir le livre</a>
+          </div>
         <div className="container home-story">
+          
+
           <h2>Mon parcours</h2>
           <p className="home-story-content">{`Enfant je voyais l'avenir, les défunts, ressentais les blessures des autres... sans comprendre qui j'etais ni quoi faire de ces capacités. 
 
