@@ -309,7 +309,7 @@ export default function FormationsPage() {
           <div className="faq" style={{ marginTop: 8 }}>
             <details>
               <summary>Initiation – prochain cycle</summary>
-              <p>Nouvelle session Janvier 2026</p>
+              <p>Nouvelle session Septembre 2026</p>
             </details>
           </div>
         </div>
