@@ -34,12 +34,12 @@ export default function FormationsPage() {
         <div className="container flow">
           <h2>Trois façons de suivre mon enseignement</h2>
           <ul className="list">
-            <li>En stages en présentiel dans le 06.</li>
+            <li>En stages en présentiel dans le 06 et dans le 83 ou en retraite chamanique (en Mongolie ou Suède)</li>
             <li>
               Sur la plateforme de formations, seul·e à son rythme, via des vidéos pré‑enregistrées —
               voir la section <a href="https://ecoledechamanisme.teachizy.fr/?fbclid=IwY2xjawMhSCdleHRuA2FlbQIxMQABHlWoY6FFy1X422fKeZ0IHsXekwJeUbHhxtWzfDTNjrf_AU2jrEYgIKeEsvrU_aem_8rnFE32QyzZcQ9ahw2S5cQ">Plateforme</a>.
             </li>
-            <li>Chaque semaine en visioconférences par petits groupes pendant 9 mois, sur inscription.</li>
+            <li>Chaque semaine en visioconférences par petits groupes pendant 14 mois, sur inscription.</li>
           </ul>
           <p>
             Parce qu’il ne suffit pas d’avoir des capacités pour savoir s’en servir, il est important — si vous vous
@@ -117,41 +117,52 @@ export default function FormationsPage() {
 
           <h3>Introduction</h3>
           <ul className="list">
-            <li>Présentation de la formation, but, programme</li>
+            <li>Présentation de la formation, objectifs, programme</li>
             <li>Qu'est-ce que le chamanisme, un chaman, les protections pour faire un voyage chamanique</li>
             <li>Les 3 mondes invisibles, initiation au voyage chamanique, rencontre avec son animal de pouvoir</li>
             <li>Le tambour, outils de pouvoir du chaman, utilisation, comment le choisir</li>
+            <li>De Relayeur a Chaman</li>
           </ul>
 
-          <h3>Monde du Bas</h3>
+          <h3>Protection de ses Energies</h3>
           <ul className="list">
-            <li>Connaître ses Plantes de pouvoir, utilisation</li>
-            <li>Connaître ses Pierres de pouvoir</li>
-            <li>Connaître son Arbre de Pouvoir</li>
-            <li>Animal Gardien et Chaman intérieur</li>
+            <li>Structurer ses corps et ses pensées</li>
+            <li>Soin d’Auto extraction</li>
+            <li>Connexion aux Energies de l’univers</li>
+            <li>Soigner les Blessures d’enfance</li>
           </ul>
 
           <h3>Monde du Haut</h3>
           <ul className="list">
-            <li>Monde du haut, Déontologie des soins chamaniques, rencontre avec un de ses guides</li>
+            <li>Néo Chamanisme et Chamanisme Traditionnel</li>
+            <li>Monde du haut, monde des guides spirituels</li>
+            <li>Déontologie des soins chamaniques</li>
+            <li>La Posture du guérisseur</li>
             <li>Rencontre avec ses ancêtres</li>
+            <li>La loi d’attraction et le sac d’Abondance</li>
             <li>Récupération de ses dons de guérisseur</li>
             <li>Soin de Recouvrements chamaniques</li>
           </ul>
 
-          <h3>Début des soins</h3>
+          <h3>Protocoles de soins Chamaniques</h3>
           <ul className="list">
             <li>Soin de Démembrement chamanique</li>
+            <li>Les 9 volontés de l’âme et le sens à notre vie</li>
             <li>Guérison du corps physique</li>
+            <li>L’équilibre spirituel</li>
             <li>Démembrement: expérience de l’unité</li>
+            <li>Les 5 valeurs</li>
             <li>Travail sur son ombre</li>
           </ul>
 
           <h3>Guérison du Karma</h3>
           <ul className="list">
             <li>Découverte de sa mission de vie avec son Maître de Karma</li>
+            <li>Les Chemins de Vie</li>
             <li>Soin de Reconnexion familiale</li>
+            <li>Garder des Relations stables</li>
             <li>Guérison du Karma actuel</li>
+            <li>La gestion émotionnelle</li>
             <li>Les flammes jumelles: rôle, connexion, mission, soin</li>
           </ul>
 
@@ -159,36 +170,42 @@ export default function FormationsPage() {
           <ul className="list">
             <li>Le royaume des morts</li>
             <li>Passage d'âme perdue, reconnaître et aider une âme perdue</li>
+            <li>La valeur du temps et réussir à le gouverner</li>
             <li>Guérison du karma des vies passées</li>
+            <li>Libération des liens toxiques</li>
             <li>Rituel de mort initiatique</li>
           </ul>
 
           <h3>Soins profonds</h3>
           <ul className="list">
             <li>Diagnostique de perte de fragment d’âme</li>
+            <li>L’abondance</li>
             <li>Guérison de blessure d'âme, Recouvrement d’âme</li>
             <li>Soin de Recouvrement d’âme sur la mémoire intra‑utérine</li>
+            <li>Protocole particulier maladies graves</li>
             <li>Nettoyer les effets négatifs des médicaments, vaccins et traitements lourds</li>
           </ul>
 
           <h3>Soins profonds 2</h3>
           <ul className="list">
             <li>Extractions chamaniques: Diagnostique</li>
+            <li>Guérison dans les 3 temps</li>
             <li>Soin d’Extraction des maladies</li>
+            <li>Le corps physique</li>
             <li>Rituel de Dégagement du karma familial</li>
+            <li>La structure des pensées</li>
             <li>Protection de la lignée</li>
+            <li>Le corps émotionnel</li>
           </ul>
 
           <h3>Renforcer les acquis</h3>
           <ul className="list">
             <li>Diagnostic chamanique, protections et déroulement de soin entier</li>
             <li>Introduction au chamanisme vert, travail avec le peuple de la nature</li>
-            <li>Recouvrement d’âme dans les vies antérieures</li>
-            <li>Médecine des 4 éléments</li>
-            <li>Création de talisman chargé pour la protection</li>
-            <li>Remise de diplômes</li>
+            <li>Trouver la bonne intention de soin</li>
+            <li>Entrainements</li>
           </ul>
-          <p><strong>Sur 9 mois, 95 euros par mois</strong></p>
+          <p><strong>Sur 14 mois, 120 euros par mois</strong></p>
           <p><strong>Certificat de praticien en chamanisme</strong></p>
 
 
@@ -225,7 +242,7 @@ export default function FormationsPage() {
             <li>Travail et soins avec les esprits de la nature</li>
             <li>Remise de diplôme</li>
           </ul>
-          <p><strong>Sur 4 mois, 95 euros par mois</strong></p>
+          <p><strong>Sur 4 mois, 120 euros par mois</strong></p>
 
           <hr />
 
@@ -266,7 +283,7 @@ export default function FormationsPage() {
             <li>Talismans de protection ONGON</li>
             <li>Remise de diplôme</li>
           </ul>
-          <p><strong>Sur 5 mois, 95 euros par mois</strong></p>
+          <p><strong>Sur 5 mois, 120 euros par mois</strong></p>
 
           <div className="CardContainer">
             <Card
