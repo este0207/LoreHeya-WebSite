@@ -2,7 +2,7 @@ import Link from "next/link";
 import NavBar2 from "../components/NavBar2";
 
 export default function MentionsLegalesPage() {
-  const updated = new Date("2025-08-01");
+  const updated = new Date("2026-10-15T12:00:00Z");
   const updatedStr = updated.toLocaleDateString("fr-FR", { year: "numeric", month: "long", day: "numeric" });
 
   return (
@@ -25,18 +25,9 @@ export default function MentionsLegalesPage() {
               <p>
                 <strong>Nom / Enseigne</strong> : Lore Heya Chamane<br />
                 <strong>Statut</strong> : Entrepreneur individuel<br />
-                <strong>Siège</strong> : Adresse à compléter – Rhône-Alpes, France<br />
                 <strong>Contact</strong> : via la page <Link href="/contact">Contact</Link>
               </p>
               <p><strong>Responsable de publication</strong> : Lore Heya</p>
-            </article>
-
-            <article className="legal-card">
-              <h2>Hébergeur</h2>
-              <p>
-                Nom de l’hébergeur – Adresse – Téléphone<br />
-                (À compléter selon votre prestataire d’hébergement)
-              </p>
             </article>
 
             <article className="legal-card">

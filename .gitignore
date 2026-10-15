@@ -20,6 +20,9 @@
 # production
 /build
 
+# local deployment launcher
+/deploy.sh
+
 # misc
 .DS_Store
 *.pem

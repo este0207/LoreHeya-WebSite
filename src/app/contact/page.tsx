@@ -21,7 +21,6 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const mailtoLink = (() => {
     const subject = formState.subject && formState.subject.trim().length > 0 ? formState.subject : 'Contact';
     const body = `Nom: ${formState.fullName}\nEmail: ${formState.email}\n\n${formState.message}`;
@@ -32,7 +31,7 @@ export default function ContactPage() {
     event.preventDefault();
     setStatus({ type: null, message: '' });
 
-    if (!formState.fullName || !formState.email || !formState.message) {
+    if (!formState.fullName.trim() || !formState.email.trim() || !formState.message.trim()) {
       setStatus({ type: 'error', message: 'Merci de remplir les champs obligatoires.' });
       return;
     }
@@ -46,16 +45,13 @@ export default function ContactPage() {
       });
       const data = await response.json();
       if (!response.ok) {
-        const detail = typeof data?.details === 'string' ? ` — ${data.details}` : '';
-        throw new Error((data?.error || 'Une erreur est survenue.') + detail);
+        throw new Error(data?.error || 'Une erreur est survenue.');
       }
       setStatus({ type: 'success', message: 'Message envoyé. Redirection…' });
-      setPreviewUrl(data?.previewUrl || null);
       setFormState({ fullName: '', email: '', subject: '', message: '' });
       router.push('/merci');
     } catch (error: any) {
       setStatus({ type: 'error', message: error?.message || 'Envoi impossible pour le moment.' });
-      setPreviewUrl(null);
     } finally {
       setIsSubmitting(false);
     }
@@ -77,7 +73,7 @@ export default function ContactPage() {
       <section className="section">
         <div className="container grid-2">
           <div className="form-card">
-            <form className="form" onSubmit={handleSubmit} noValidate>
+            <form className="form" onSubmit={handleSubmit}>
               <div className="field">
                 <label htmlFor="fullName">Nom complet *</label>
                 <input
@@ -89,6 +85,7 @@ export default function ContactPage() {
                   value={formState.fullName}
                   onChange={(e) => setFormState({ ...formState, fullName: e.target.value })}
                   required
+                  maxLength={120}
                 />
               </div>
 
@@ -103,6 +100,7 @@ export default function ContactPage() {
                   value={formState.email}
                   onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                   required
+                  maxLength={254}
                 />
               </div>
 
@@ -115,6 +113,7 @@ export default function ContactPage() {
                   className="input"
                   placeholder="Sujet de votre demande"
                   value={formState.subject}
+                  maxLength={200}
                   onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
                 />
               </div>
@@ -130,18 +129,13 @@ export default function ContactPage() {
                   value={formState.message}
                   onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                   required
+                  maxLength={5000}
                 />
               </div>
 
               {status.type && (
-                <div className={`form-status ${status.type}`}>
+                <div className={`form-status ${status.type}`} role="status" aria-live="polite">
                   {status.message}
-                  {previewUrl && (
-                    <>
-                      {' '}
-                      <a href={previewUrl} target="_blank" rel="noreferrer">Voir l’aperçu de l’email (test)</a>
-                    </>
-                  )}
                 </div>
               )}
 

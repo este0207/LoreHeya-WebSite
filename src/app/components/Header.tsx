@@ -1,41 +1,28 @@
-'use client';
-import { useState, useEffect } from 'react';
 import NavBar from "./NavBar";
 import Image from 'next/image';
 
-
 export default function Header() {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsVisible(true);
-        }, 500); // Délai de 100ms
-
-        return () => clearTimeout(timer);
-    }, []);
-
     return (
-        <header className={`header-transition ${isVisible ? 'header-visible' : 'header-hidden'}`}>
+        <header className="home-hero">
             <Image
                 src="/bg5.jpg"
-                alt="Header Background"
-                layout="fill"
-                objectFit="cover"
-                quality={100}
+                alt=""
+                fill
+                sizes="100vw"
+                className="home-hero-image"
                 priority
             />
             <NavBar />
 
             <div className="header-cta">
+                <span className="hero-eyebrow">Soins · Transmission · Voyages</span>
                 <h2 className="header-cta-title">Harmonie du corps et de l'âme</h2>
                 <p className="header-cta-subtitle">Réservez une guidance ou découvrez les formations</p>
                 <div className="header-cta-actions">
                     <a href="/soins" className="btn btn-primary">Réserver une guidance</a>
-                    <a href="/formations" className="btn btn-ghost">Découvrir les formations</a>
+                    <a href="/formations" className="btn btn-hero-ghost">Découvrir les formations</a>
                 </div>
             </div>
         </header>
     );
   }
-  

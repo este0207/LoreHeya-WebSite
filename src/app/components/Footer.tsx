@@ -1,7 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -25,14 +23,10 @@ export default function Footer() {
         <div className="footer-col">
           <h4 className="footer-heading">Contact</h4>
           <ul className="footer-contact">
-            <li><FaEnvelope aria-hidden /> <a href="/contact">Me contacter</a></li>
-            <li><FaPhone aria-hidden /> <a href="/contact">Prendre rendez-vous</a></li>
-            <li><FaMapMarkerAlt aria-hidden /> Var · À distance</li>
+            <li><FaEnvelope aria-hidden="true" /> <Link href="/contact">Me contacter</Link></li>
+            <li><FaEnvelope aria-hidden="true" /> <Link href="/contact">Demander un rendez-vous</Link></li>
+            <li><FaMapMarkerAlt aria-hidden="true" /> Roquebrune-sur-Argens · À distance</li>
           </ul>
-          <div className="footer-social" aria-label="Réseaux sociaux">
-            <a href="#" aria-label="Facebook" className="social-link"><FaFacebook aria-hidden /></a>
-            <a href="#" aria-label="Instagram" className="social-link"><FaInstagram aria-hidden /></a>
-          </div>
         </div>
       </div>
       <div className="footer-bottom">
