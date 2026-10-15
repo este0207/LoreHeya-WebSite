@@ -139,7 +139,7 @@ export default function AdminDashboard() {
 
   return (
     <main className="admin-shell">
-      <header className="admin-topbar"><div><span className="admin-kicker">Lore Heya</span><h1>Administration</h1></div><div className="admin-top-actions"><a href="/" target="_blank" rel="noreferrer">Voir le site ↗</a><button className="admin-quiet-button" onClick={logout}>Déconnexion</button></div></header>
+      {/* <header className="admin-topbar"><div><span className="admin-kicker">Lore Heya</span><h1>Administration</h1></div><div className="admin-top-actions"><a href="/" target="_blank" rel="noreferrer">Voir le site ↗</a><button className="admin-quiet-button" onClick={logout}>Déconnexion</button></div></header> */}
       <div className="admin-layout">
         <aside className="admin-sidebar"><h2>Contenus</h2>{Object.entries(labels).map(([key, label]) => <button key={key} className={active === key ? 'active' : ''} onClick={() => setActive(key)}>{label}<span>{content[key]?.length ?? 0}</span></button>)}<p>Les modifications prennent effet sur le site après enregistrement.</p></aside>
         <section className="admin-editor">
