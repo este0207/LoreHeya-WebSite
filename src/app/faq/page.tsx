@@ -169,8 +169,15 @@ function StarRating({ value, onChange }: { value: number; onChange: (n: number) 
 }
 
 export default function FAQPage() {
-  const faq = useMemo(() => DEFAULT_FAQ, []);
+  const [faq, setFaq] = useState<FaqItem[]>(DEFAULT_FAQ);
   const { comments, add, loading, error } = useCommentsApi('faq');
+
+  useEffect(() => {
+    fetch('/api/site-content', { cache: 'no-store' })
+      .then((response) => response.ok ? response.json() : Promise.reject(new Error('FAQ indisponible')))
+      .then((data: { faq?: FaqItem[] }) => { if (Array.isArray(data.faq)) setFaq(data.faq); })
+      .catch(() => undefined);
+  }, []);
 
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');

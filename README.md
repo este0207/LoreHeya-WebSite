@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Administration du contenu
+
+La page de connexion est disponible sur `/admin/login` et le panneau sur `/admin`. Pour l’activer, définissez `ADMIN_USERNAME`, `ADMIN_PASSWORD` et `ADMIN_SESSION_SECRET` dans l’environnement du serveur (voir `admin.env.example` pour les noms). Le panneau reste fermé tant que ces valeurs ne sont pas définies. Utilisez un mot de passe unique et une clé aléatoire d’au moins 32 caractères. Ne stockez pas ces secrets dans Git.
+
+L’administration permet de modifier les contenus d’accueil, les cartes, les voyages et leurs pages détaillées, les stages et les retraites. Chaque rubrique permet d’ajouter, réordonner et supprimer des entrées. Les images peuvent être importées depuis le panneau (JPG, PNG, WebP ou AVIF, 5 Mo maximum). Les contenus éditables sont stockés dans `src/data/site-content.json` et les imports dans `public/uploads`.
+
+Le stockage actuel utilise le disque du serveur. Le déploiement doit donc conserver ces deux emplacements entre les redémarrages et autoriser l’écriture au processus Next.js. Un déploiement serverless ou un conteneur éphémère nécessite un stockage persistant partagé avant d’utiliser l’administration en production.
